@@ -118,7 +118,7 @@ import * as i2$$2 from "deco-sites/std/accounts/shopify.ts";
 import * as i2$$3 from "deco-sites/std/accounts/vnda.ts";
 import * as i2$$4 from "deco-sites/std/accounts/vtex.ts";
 import * as i2$$5 from "deco-sites/std/accounts/yourViews.ts";
-import * as i2$$$3 from "deco-sites/std/loaders/linxImpulse/autocompletes/products.ts";
+import * as i2$$$3 from "deco-sites/std/loaders/linxImpulse/autocompletes/popular.ts";
 import * as i2$$$4 from "deco-sites/std/loaders/linxImpulse/autocompletes/suggestions.ts";
 import * as i2$$$5 from "deco-sites/std/loaders/linxImpulse/pages/recommendations.ts";
 import * as i2$$$6 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts";
@@ -244,7 +244,7 @@ const manifest = {
     "$live/loaders/state.ts": i2$$$0,
     "$live/loaders/workflows/events.ts": i2$$$1,
     "$live/loaders/workflows/get.ts": i2$$$2,
-    "deco-sites/std/loaders/linxImpulse/autocompletes/products.ts": i2$$$3,
+    "deco-sites/std/loaders/linxImpulse/autocompletes/popular.ts": i2$$$3,
     "deco-sites/std/loaders/linxImpulse/autocompletes/suggestions.ts": i2$$$4,
     "deco-sites/std/loaders/linxImpulse/pages/recommendations.ts": i2$$$5,
     "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts": i2$$$6,
