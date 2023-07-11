@@ -3,6 +3,7 @@ import { ProductListingPage } from "deco-sites/std/commerce/types.ts";
 import type { JSX } from "preact";
 
 const SORT_QUERY_PARAM = "sort";
+const PAGE_QUERY_PARAM = "page";
 
 const useSort = () =>
   useMemo(() => {
@@ -13,8 +14,8 @@ const useSort = () =>
 // TODO: Replace with "search utils"
 const applySort = (e: JSX.TargetedEvent<HTMLSelectElement, Event>) => {
   const urlSearchParams = new URLSearchParams(window.location.search);
-
   urlSearchParams.set(SORT_QUERY_PARAM, e.currentTarget.value);
+  urlSearchParams.set(PAGE_QUERY_PARAM, "0");
   window.location.search = urlSearchParams.toString();
 };
 
