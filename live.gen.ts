@@ -74,6 +74,7 @@ import * as i2$$$$$$$$2 from "$live/matchers/MatchDate.ts";
 import * as i2$$$$$$$$3 from "$live/matchers/MatchDevice.ts";
 import * as i2$$$$$$$$4 from "$live/matchers/MatchEnvironment.ts";
 import * as i2$$$$$$$$5 from "$live/matchers/MatchHost.ts";
+import * as i1$$$$$6 from "$live/matchers/MatchLocation.ts";
 import * as i2$$$$$$$$6 from "$live/matchers/MatchMulti.ts";
 import * as i2$$$$$$$$7 from "$live/matchers/MatchRandom.ts";
 import * as i2$$$$$$$$8 from "$live/matchers/MatchSite.ts";
@@ -147,22 +148,23 @@ import * as i2$$$$$12 from "deco-sites/std/sections/SEO.tsx";
 import * as i2$$$$$13 from "deco-sites/std/sections/SEOPDP.tsx";
 import * as i2$$$$$14 from "deco-sites/std/sections/SEOPLP.tsx";
 import * as i2$$$$$15 from "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx";
-import * as i2$$$$$$3 from "deco-sites/std/actions/vtex/cart/addItems.ts";
-import * as i2$$$$$$4 from "deco-sites/std/actions/vtex/cart/getInstallment.ts";
-import * as i2$$$$$$5 from "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts";
-import * as i2$$$$$$6 from "deco-sites/std/actions/vtex/cart/removeItems.ts";
-import * as i2$$$$$$7 from "deco-sites/std/actions/vtex/cart/simulation.ts";
-import * as i2$$$$$$8 from "deco-sites/std/actions/vtex/cart/updateAttachment.ts";
-import * as i2$$$$$$9 from "deco-sites/std/actions/vtex/cart/updateCoupons.ts";
-import * as i2$$$$$$10 from "deco-sites/std/actions/vtex/cart/updateItemAttachment.ts";
-import * as i2$$$$$$11 from "deco-sites/std/actions/vtex/cart/updateItemPrice.ts";
-import * as i2$$$$$$12 from "deco-sites/std/actions/vtex/cart/updateItems.ts";
-import * as i2$$$$$$13 from "deco-sites/std/actions/vtex/cart/updateProfile.ts";
-import * as i2$$$$$$14 from "deco-sites/std/actions/vtex/cart/updateUser.ts";
-import * as i2$$$$$$15 from "deco-sites/std/actions/vtex/newsletter/subscribe.ts";
-import * as i2$$$$$$16 from "deco-sites/std/actions/vtex/notifyme.ts";
-import * as i2$$$$$$17 from "deco-sites/std/actions/vtex/wishlist/addItem.ts";
-import * as i2$$$$$$18 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
+import * as i2$$$$$$3 from "deco-sites/std/actions/vtex/analytics/sendEvent.ts";
+import * as i2$$$$$$4 from "deco-sites/std/actions/vtex/cart/addItems.ts";
+import * as i2$$$$$$5 from "deco-sites/std/actions/vtex/cart/getInstallment.ts";
+import * as i2$$$$$$6 from "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts";
+import * as i2$$$$$$7 from "deco-sites/std/actions/vtex/cart/removeItems.ts";
+import * as i2$$$$$$8 from "deco-sites/std/actions/vtex/cart/simulation.ts";
+import * as i2$$$$$$9 from "deco-sites/std/actions/vtex/cart/updateAttachment.ts";
+import * as i2$$$$$$10 from "deco-sites/std/actions/vtex/cart/updateCoupons.ts";
+import * as i2$$$$$$11 from "deco-sites/std/actions/vtex/cart/updateItemAttachment.ts";
+import * as i2$$$$$$12 from "deco-sites/std/actions/vtex/cart/updateItemPrice.ts";
+import * as i2$$$$$$13 from "deco-sites/std/actions/vtex/cart/updateItems.ts";
+import * as i2$$$$$$14 from "deco-sites/std/actions/vtex/cart/updateProfile.ts";
+import * as i2$$$$$$15 from "deco-sites/std/actions/vtex/cart/updateUser.ts";
+import * as i2$$$$$$16 from "deco-sites/std/actions/vtex/newsletter/subscribe.ts";
+import * as i2$$$$$$17 from "deco-sites/std/actions/vtex/notifyme.ts";
+import * as i2$$$$$$18 from "deco-sites/std/actions/vtex/wishlist/addItem.ts";
+import * as i2$$$$$$19 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
 
 const manifest = {
   "routes": {
@@ -281,6 +283,7 @@ const manifest = {
     "$live/matchers/MatchDevice.ts": i2$$$$$$$$3,
     "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$4,
     "$live/matchers/MatchHost.ts": i2$$$$$$$$5,
+    "$live/matchers/MatchLocation.ts": i1$$$$$6,
     "$live/matchers/MatchMulti.ts": i2$$$$$$$$6,
     "$live/matchers/MatchRandom.ts": i2$$$$$$$$7,
     "$live/matchers/MatchSite.ts": i2$$$$$$$$8,
@@ -296,22 +299,23 @@ const manifest = {
     "$live/actions/workflows/cancel.ts": i2$$$$$$0,
     "$live/actions/workflows/signal.ts": i2$$$$$$1,
     "$live/actions/workflows/start.ts": i2$$$$$$2,
-    "deco-sites/std/actions/vtex/cart/addItems.ts": i2$$$$$$3,
-    "deco-sites/std/actions/vtex/cart/getInstallment.ts": i2$$$$$$4,
-    "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts": i2$$$$$$5,
-    "deco-sites/std/actions/vtex/cart/removeItems.ts": i2$$$$$$6,
-    "deco-sites/std/actions/vtex/cart/simulation.ts": i2$$$$$$7,
-    "deco-sites/std/actions/vtex/cart/updateAttachment.ts": i2$$$$$$8,
-    "deco-sites/std/actions/vtex/cart/updateCoupons.ts": i2$$$$$$9,
-    "deco-sites/std/actions/vtex/cart/updateItemAttachment.ts": i2$$$$$$10,
-    "deco-sites/std/actions/vtex/cart/updateItemPrice.ts": i2$$$$$$11,
-    "deco-sites/std/actions/vtex/cart/updateItems.ts": i2$$$$$$12,
-    "deco-sites/std/actions/vtex/cart/updateProfile.ts": i2$$$$$$13,
-    "deco-sites/std/actions/vtex/cart/updateUser.ts": i2$$$$$$14,
-    "deco-sites/std/actions/vtex/newsletter/subscribe.ts": i2$$$$$$15,
-    "deco-sites/std/actions/vtex/notifyme.ts": i2$$$$$$16,
-    "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$$17,
-    "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$$18,
+    "deco-sites/std/actions/vtex/analytics/sendEvent.ts": i2$$$$$$3,
+    "deco-sites/std/actions/vtex/cart/addItems.ts": i2$$$$$$4,
+    "deco-sites/std/actions/vtex/cart/getInstallment.ts": i2$$$$$$5,
+    "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts": i2$$$$$$6,
+    "deco-sites/std/actions/vtex/cart/removeItems.ts": i2$$$$$$7,
+    "deco-sites/std/actions/vtex/cart/simulation.ts": i2$$$$$$8,
+    "deco-sites/std/actions/vtex/cart/updateAttachment.ts": i2$$$$$$9,
+    "deco-sites/std/actions/vtex/cart/updateCoupons.ts": i2$$$$$$10,
+    "deco-sites/std/actions/vtex/cart/updateItemAttachment.ts": i2$$$$$$11,
+    "deco-sites/std/actions/vtex/cart/updateItemPrice.ts": i2$$$$$$12,
+    "deco-sites/std/actions/vtex/cart/updateItems.ts": i2$$$$$$13,
+    "deco-sites/std/actions/vtex/cart/updateProfile.ts": i2$$$$$$14,
+    "deco-sites/std/actions/vtex/cart/updateUser.ts": i2$$$$$$15,
+    "deco-sites/std/actions/vtex/newsletter/subscribe.ts": i2$$$$$$16,
+    "deco-sites/std/actions/vtex/notifyme.ts": i2$$$$$$17,
+    "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$$18,
+    "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$$19,
   },
   "functions": {
     "deco-sites/std/functions/butterCMSAds.ts": i2$0,
