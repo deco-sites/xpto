@@ -15,7 +15,7 @@ import Button from "$store/components/ui/Button.tsx";
 import Spinner from "$store/components/ui/Spinner.tsx";
 import ProductCard from "$store/components/product/ProductCard.tsx";
 import Slider from "$store/components/ui/Slider.tsx";
-import { useAutocomplete } from "deco-sites/std/packs/linxImpulse/hooks/useAutocomplete.ts";
+import { useAutocomplete } from "deco-sites/std/packs/vtex/hooks/useAutocomplete.ts";
 import { useUI } from "$store/sdk/useUI.ts";
 import { sendEvent } from "$store/sdk/analytics.tsx";
 
@@ -178,7 +178,7 @@ function Searchbar({
                 <ul id="search-suggestion" class="flex flex-col gap-6">
                   {suggestions.value!.searches?.map(({ term }) => (
                     <li>
-                      <a href={`/busca?q=${term}`} class="flex gap-4 items-center">
+                      <a href={`/s?q=${term}`} class="flex gap-4 items-center">
                         <span>
                           <Icon
                             id="MagnifyingGlass"
