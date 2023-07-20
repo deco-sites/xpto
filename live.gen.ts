@@ -74,10 +74,11 @@ import * as i2$$$$$$$$2 from "$live/matchers/MatchDate.ts";
 import * as i2$$$$$$$$3 from "$live/matchers/MatchDevice.ts";
 import * as i2$$$$$$$$4 from "$live/matchers/MatchEnvironment.ts";
 import * as i2$$$$$$$$5 from "$live/matchers/MatchHost.ts";
-import * as i2$$$$$$$$6 from "$live/matchers/MatchMulti.ts";
-import * as i2$$$$$$$$7 from "$live/matchers/MatchRandom.ts";
-import * as i2$$$$$$$$8 from "$live/matchers/MatchSite.ts";
-import * as i2$$$$$$$$9 from "$live/matchers/MatchUserAgent.ts";
+import * as i2$$$$$$$$6 from "$live/matchers/MatchLocation.ts";
+import * as i2$$$$$$$$7 from "$live/matchers/MatchMulti.ts";
+import * as i2$$$$$$$$8 from "$live/matchers/MatchRandom.ts";
+import * as i2$$$$$$$$9 from "$live/matchers/MatchSite.ts";
+import * as i2$$$$$$$$10 from "$live/matchers/MatchUserAgent.ts";
 import * as i2$$$$$$$$$0 from "$live/flags/audience.ts";
 import * as i2$$$$$$$$$1 from "$live/flags/everyone.ts";
 import * as i2$$$$$$$$$2 from "$live/flags/flag.ts";
@@ -121,24 +122,23 @@ import * as i2$$5 from "deco-sites/std/accounts/vtex.ts";
 import * as i2$$6 from "deco-sites/std/accounts/yourViews.ts";
 import * as i2$$$3 from "deco-sites/std/loaders/linxImpulse/autocompletes/suggestions.ts";
 import * as i2$$$4 from "deco-sites/std/loaders/linxImpulse/pages/recommendations.ts";
-import * as i2$$$5 from "deco-sites/std/loaders/linxImpulse/search.ts";
-import * as i2$$$6 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts";
-import * as i2$$$7 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts";
-import * as i2$$$8 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductListingPage.ts";
-import * as i2$$$9 from "deco-sites/std/loaders/vnda/proxy.ts";
-import * as i2$$$10 from "deco-sites/std/loaders/vtex/cart.ts";
-import * as i2$$$11 from "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts";
-import * as i2$$$12 from "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts";
-import * as i2$$$13 from "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts";
-import * as i2$$$14 from "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts";
-import * as i2$$$15 from "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts";
-import * as i2$$$16 from "deco-sites/std/loaders/vtex/legacy/productList.ts";
-import * as i2$$$17 from "deco-sites/std/loaders/vtex/legacy/productListingPage.ts";
-import * as i2$$$18 from "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts";
-import * as i2$$$19 from "deco-sites/std/loaders/vtex/navbar.ts";
-import * as i2$$$20 from "deco-sites/std/loaders/vtex/proxy.ts";
-import * as i2$$$21 from "deco-sites/std/loaders/vtex/user.ts";
-import * as i2$$$22 from "deco-sites/std/loaders/vtex/wishlist.ts";
+import * as i2$$$5 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts";
+import * as i2$$$6 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts";
+import * as i2$$$7 from "deco-sites/std/loaders/nuvemShop/nuvemShopProductListingPage.ts";
+import * as i2$$$8 from "deco-sites/std/loaders/vnda/proxy.ts";
+import * as i2$$$9 from "deco-sites/std/loaders/vtex/cart.ts";
+import * as i2$$$10 from "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts";
+import * as i2$$$11 from "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts";
+import * as i2$$$12 from "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts";
+import * as i2$$$13 from "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts";
+import * as i2$$$14 from "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts";
+import * as i2$$$15 from "deco-sites/std/loaders/vtex/legacy/productList.ts";
+import * as i2$$$16 from "deco-sites/std/loaders/vtex/legacy/productListingPage.ts";
+import * as i2$$$17 from "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts";
+import * as i2$$$18 from "deco-sites/std/loaders/vtex/navbar.ts";
+import * as i2$$$19 from "deco-sites/std/loaders/vtex/proxy.ts";
+import * as i2$$$20 from "deco-sites/std/loaders/vtex/user.ts";
+import * as i2$$$21 from "deco-sites/std/loaders/vtex/wishlist.ts";
 import * as i2$$$$7 from "deco-sites/std/handlers/vtex/sitemap.ts";
 import * as i2$$$$$5 from "deco-sites/std/sections/Analytics.tsx";
 import * as i2$$$$$6 from "deco-sites/std/sections/configButterCMS.global.tsx";
@@ -249,26 +249,25 @@ const manifest = {
     "$live/loaders/workflows/get.ts": i2$$$2,
     "deco-sites/std/loaders/linxImpulse/autocompletes/suggestions.ts": i2$$$3,
     "deco-sites/std/loaders/linxImpulse/pages/recommendations.ts": i2$$$4,
-    "deco-sites/std/loaders/linxImpulse/search.ts": i2$$$5,
-    "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts": i2$$$6,
-    "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts": i2$$$7,
-    "deco-sites/std/loaders/nuvemShop/nuvemShopProductListingPage.ts": i2$$$8,
-    "deco-sites/std/loaders/vnda/proxy.ts": i2$$$9,
-    "deco-sites/std/loaders/vtex/cart.ts": i2$$$10,
+    "deco-sites/std/loaders/nuvemShop/nuvemShopProductDetailsPage.ts": i2$$$5,
+    "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts": i2$$$6,
+    "deco-sites/std/loaders/nuvemShop/nuvemShopProductListingPage.ts": i2$$$7,
+    "deco-sites/std/loaders/vnda/proxy.ts": i2$$$8,
+    "deco-sites/std/loaders/vtex/cart.ts": i2$$$9,
     "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts":
-      i2$$$11,
-    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$12,
+      i2$$$10,
+    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$11,
     "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts":
-      i2$$$13,
-    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$14,
-    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$15,
-    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$16,
-    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$17,
-    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$18,
-    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$19,
-    "deco-sites/std/loaders/vtex/proxy.ts": i2$$$20,
-    "deco-sites/std/loaders/vtex/user.ts": i2$$$21,
-    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$22,
+      i2$$$12,
+    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$13,
+    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$14,
+    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$15,
+    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$16,
+    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$17,
+    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$18,
+    "deco-sites/std/loaders/vtex/proxy.ts": i2$$$19,
+    "deco-sites/std/loaders/vtex/user.ts": i2$$$20,
+    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$21,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i2$$$$0,
@@ -290,10 +289,11 @@ const manifest = {
     "$live/matchers/MatchDevice.ts": i2$$$$$$$$3,
     "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$4,
     "$live/matchers/MatchHost.ts": i2$$$$$$$$5,
-    "$live/matchers/MatchMulti.ts": i2$$$$$$$$6,
-    "$live/matchers/MatchRandom.ts": i2$$$$$$$$7,
-    "$live/matchers/MatchSite.ts": i2$$$$$$$$8,
-    "$live/matchers/MatchUserAgent.ts": i2$$$$$$$$9,
+    "$live/matchers/MatchLocation.ts": i2$$$$$$$$6,
+    "$live/matchers/MatchMulti.ts": i2$$$$$$$$7,
+    "$live/matchers/MatchRandom.ts": i2$$$$$$$$8,
+    "$live/matchers/MatchSite.ts": i2$$$$$$$$9,
+    "$live/matchers/MatchUserAgent.ts": i2$$$$$$$$10,
   },
   "flags": {
     "$live/flags/audience.ts": i2$$$$$$$$$0,
