@@ -99,7 +99,7 @@ function Searchbar({
           >
             <Icon
               class="text-base-300"
-              id="MagnifyingGlass"
+              id="Search"
               size={20}
               strokeWidth={0.01}
             />
@@ -181,7 +181,7 @@ function Searchbar({
                       <a href={`/s?q=${term}`} class="flex gap-4 items-center">
                         <span>
                           <Icon
-                            id="MagnifyingGlass"
+                            id="Search"
                             size={20}
                             strokeWidth={0.01}
                           />

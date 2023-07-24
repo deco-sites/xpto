@@ -2,47 +2,177 @@ import { asset } from "$fresh/runtime.ts";
 import type { JSX } from "preact";
 
 export type AvailableIcons =
+  | "Apple"
   | "ArrowsPointingOut"
+  | "ArrowRight"
   | "Bars3"
+  | "BigCommerce"
+  | "BuildingStore"
+  | "Cart"
+  | "Check"
+  | "ChevronDown"
   | "ChevronLeft"
   | "ChevronRight"
   | "ChevronUp"
-  | "ChevronDown"
+  | "ClockHour4"
+  | "Cookie"
   | "CreditCard"
   | "Deco"
+  | "DecoLogo"
   | "Diners"
   | "Discord"
   | "Discount"
+  | "Edit"
   | "Elo"
+  | "Equal"
+  | "Eye"
   | "Facebook"
   | "FilterList"
+  | "Flame"
+  | "Gift"
+  | "Google"
+  | "Hanger"
+  | "HandPinch"
+  | "Headset"
   | "Heart"
+  | "Heart2"
   | "Instagram"
+  | "LayoutGrid1"
+  | "LayoutGrid2"
+  | "LayoutGrid3"
+  | "LayoutGrid4"
+  | "Link"
   | "Linkedin"
+  | "List"
   | "Logo"
-  | "Minus"
+  | "Magento"
+  | "Mail"
   | "MapPin"
-  | "MagnifyingGlass"
   | "Mastercard"
   | "Message"
+  | "Minus"
+  | "Oracle"
   | "Phone"
+  | "Photo"
   | "Pix"
   | "Plus"
   | "QuestionMarkCircle"
+  | "Refresh"
+  | "Reload"
   | "Return"
   | "Ruler"
+  | "Salesforce"
+  | "Search"
+  | "Send"
+  | "Share"
+  | "Shopify"
   | "ShoppingCart"
+  | "SocialLinkedin"
+  | "SocialTwitter"
   | "Star"
+  | "Star1"
+  | "Tag"
+  | "ThumbDown"
+  | "ThumbUp"
   | "Tiktok"
+  | "TikTok"
   | "Trash"
   | "Truck"
   | "Twitter"
   | "User"
   | "Visa"
+  | "VTEX"
   | "WhatsApp"
   | "XMark"
-  | "Zoom"
-  | "ArrowRight";
+  | "Youtube"
+  | "Zoom";
+
+export const IconsAvaliable = {
+  Apple: "Apple",
+  ArrowsPointingOut: "ArrowsPointingOut",
+  ArrowRight: "ArrowRight",
+  Bars3: "Bars3",
+  BigCommerce: "BigCommerce",
+  BuildingStore: "BuildingStore",
+  Cart: "Cart",
+  Check: "Check",
+  ChevronDown: "ChevronDown",
+  ChevronLeft: "ChevronLeft",
+  ChevronRight: "ChevronRight",
+  ChevronUp: "ChevronUp",
+  ClockHour4: "ClockHour4",
+  Cookie: "Cookie",
+  CreditCard: "CreditCard",
+  Deco: "Deco",
+  DecoLogo: "DecoLogo",
+  Diners: "Diners",
+  Discord: "Discord",
+  Discount: "Discount",
+  Edit: "Edit",
+  Elo: "Elo",
+  Equal: "Equal",
+  Eye: "Eye",
+  Facebook: "Facebook",
+  FilterList: "FilterList",
+  Flame: "Flame",
+  Gift: "Gift",
+  Google: "Google",
+  Hanger: "Hanger",
+  HandPinch: "HandPinch",
+  Headset: "Headset",
+  Heart: "Heart",
+  Heart2: "Heart2",
+  Instagram: "Instagram",
+  LayoutGrid1: "LayoutGrid1",
+  LayoutGrid2: "LayoutGrid2",
+  LayoutGrid3: "LayoutGrid3",
+  LayoutGrid4: "LayoutGrid4",
+  Link: "Link",
+  Linkedin: "Linkedin",
+  List: "List",
+  Logo: "Logo",
+  Magento: "Magento",
+  Mail: "Mail",
+  MapPin: "MapPin",
+  Mastercard: "Mastercard",
+  Message: "Message",
+  Minus: "Minus",
+  Oracle: "Oracle",
+  Phone: "Phone",
+  Photo: "Photo",
+  Pix: "Pix",
+  Plus: "Plus",
+  QuestionMarkCircle: "QuestionMarkCircle",
+  Refresh: "Refresh",
+  Reload: "Reload",
+  Return: "Return",
+  Ruler: "Ruler",
+  Salesforce: "Salesforce",
+  Search: "Search",
+  Send: "Send",
+  Share: "Share",
+  Shopify: "Shopify",
+  ShoppingCart: "ShoppingCart",
+  SocialLinkedin: "SocialLinkedin",
+  SocialTwitter: "SocialTwitter",
+  Star: "Star",
+  Star1: "Star1",
+  Tag: "Tag",
+  ThumbDown: "ThumbDown",
+  ThumbUp: "ThumbUp",
+  Tiktok: "Tiktok",
+  TikTok: "TikTok",
+  Trash: "Trash",
+  Truck: "Truck",
+  Twitter: "Twitter",
+  User: "User",
+  Visa: "Visa",
+  VTEX: "VTEX",
+  WhatsApp: "WhatsApp",
+  XMark: "XMark",
+  YouTube: "Youtube",
+  Zoom: "Zoom",
+} as const;
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
   /**

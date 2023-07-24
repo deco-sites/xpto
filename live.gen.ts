@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import { DecoManifest } from "$live/types.ts";
+import * as $$0 from "./accounts/salesforce.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/AddToCartButton.tsx";
@@ -18,28 +19,30 @@ import * as $$$$$9 from "./islands/SliderJS.tsx";
 import * as $$$$$10 from "./islands/WishlistButton.tsx";
 import * as $$$$$$$$0 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$$$1 from "./sections/Category/CategoryList.tsx";
-import * as $$$$$$$$2 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$$$3 from "./sections/Content/Faq.tsx";
-import * as $$$$$$$$4 from "./sections/Content/Logos.tsx";
-import * as $$$$$$$$5 from "./sections/Content/Testimonials.tsx";
-import * as $$$$$$$$6 from "./sections/DesignSystem/DesignSystem.tsx";
-import * as $$$$$$$$7 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$$$8 from "./sections/Header/Header.tsx";
-import * as $$$$$$$$9 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$$$10 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$$$11 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$$$12 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$$$13 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$$$14 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$$$15 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$$$16 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$$$17 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$$$18 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$$$19 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$$$20 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$$$21 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$$$22 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$$$23 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$$$2 from "./sections/Category/CategoryText.tsx";
+import * as $$$$$$$$3 from "./sections/Content/Benefits.tsx";
+import * as $$$$$$$$4 from "./sections/Content/Faq.tsx";
+import * as $$$$$$$$5 from "./sections/Content/Icons.tsx";
+import * as $$$$$$$$6 from "./sections/Content/Logos.tsx";
+import * as $$$$$$$$7 from "./sections/Content/Testimonials.tsx";
+import * as $$$$$$$$8 from "./sections/DesignSystem/DesignSystem.tsx";
+import * as $$$$$$$$9 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$$$10 from "./sections/Header/Header.tsx";
+import * as $$$$$$$$11 from "./sections/Images/BannerGrid.tsx";
+import * as $$$$$$$$12 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$$$13 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$$$14 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$$$15 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$$$16 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$$$17 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$$$18 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$$$19 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$$$20 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$$$21 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$$$22 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$$$23 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$$$24 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$$$25 from "./sections/Social/WhatsApp.tsx";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -169,6 +172,16 @@ import * as i2$$$$$$17 from "deco-sites/std/actions/vtex/wishlist/addItem.ts";
 import * as i2$$$$$$18 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
 
 const manifest = {
+  "accounts": {
+    "deco-sites/std/accounts/linxImpulse.ts": i2$$0,
+    "deco-sites/std/accounts/nuvemShop.ts": i2$$1,
+    "deco-sites/std/accounts/occ.ts": i2$$2,
+    "deco-sites/std/accounts/shopify.ts": i2$$3,
+    "deco-sites/std/accounts/vnda.ts": i2$$4,
+    "deco-sites/std/accounts/vtex.ts": i2$$5,
+    "deco-sites/std/accounts/yourViews.ts": i2$$6,
+    "deco-sites/xpto/accounts/salesforce.ts": $$0,
+  },
   "routes": {
     "./routes/_app.tsx": $$$$1,
     "./routes/_middleware.ts": $live_middleware,
@@ -218,28 +231,30 @@ const manifest = {
     "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx": i2$$$$$15,
     "deco-sites/xpto/sections/Category/CategoryBanner.tsx": $$$$$$$$0,
     "deco-sites/xpto/sections/Category/CategoryList.tsx": $$$$$$$$1,
-    "deco-sites/xpto/sections/Content/Benefits.tsx": $$$$$$$$2,
-    "deco-sites/xpto/sections/Content/Faq.tsx": $$$$$$$$3,
-    "deco-sites/xpto/sections/Content/Logos.tsx": $$$$$$$$4,
-    "deco-sites/xpto/sections/Content/Testimonials.tsx": $$$$$$$$5,
-    "deco-sites/xpto/sections/DesignSystem/DesignSystem.tsx": $$$$$$$$6,
-    "deco-sites/xpto/sections/Footer/Footer.tsx": $$$$$$$$7,
-    "deco-sites/xpto/sections/Header/Header.tsx": $$$$$$$$8,
-    "deco-sites/xpto/sections/Images/BannerGrid.tsx": $$$$$$$$9,
-    "deco-sites/xpto/sections/Images/Carousel.tsx": $$$$$$$$10,
-    "deco-sites/xpto/sections/Images/ImageGallery.tsx": $$$$$$$$11,
-    "deco-sites/xpto/sections/Images/ShoppableBanner.tsx": $$$$$$$$12,
-    "deco-sites/xpto/sections/Links/LinkTree.tsx": $$$$$$$$13,
-    "deco-sites/xpto/sections/Links/Shortcuts.tsx": $$$$$$$$14,
-    "deco-sites/xpto/sections/Miscellaneous/CampaignTimer.tsx": $$$$$$$$15,
-    "deco-sites/xpto/sections/Miscellaneous/CookieConsent.tsx": $$$$$$$$16,
-    "deco-sites/xpto/sections/Newsletter/Newsletter.tsx": $$$$$$$$17,
-    "deco-sites/xpto/sections/Product/ProductDetails.tsx": $$$$$$$$18,
-    "deco-sites/xpto/sections/Product/ProductShelf.tsx": $$$$$$$$19,
-    "deco-sites/xpto/sections/Product/SearchResult.tsx": $$$$$$$$20,
-    "deco-sites/xpto/sections/Product/Wishlist.tsx": $$$$$$$$21,
-    "deco-sites/xpto/sections/Social/InstagramPosts.tsx": $$$$$$$$22,
-    "deco-sites/xpto/sections/Social/WhatsApp.tsx": $$$$$$$$23,
+    "deco-sites/xpto/sections/Category/CategoryText.tsx": $$$$$$$$2,
+    "deco-sites/xpto/sections/Content/Benefits.tsx": $$$$$$$$3,
+    "deco-sites/xpto/sections/Content/Faq.tsx": $$$$$$$$4,
+    "deco-sites/xpto/sections/Content/Icons.tsx": $$$$$$$$5,
+    "deco-sites/xpto/sections/Content/Logos.tsx": $$$$$$$$6,
+    "deco-sites/xpto/sections/Content/Testimonials.tsx": $$$$$$$$7,
+    "deco-sites/xpto/sections/DesignSystem/DesignSystem.tsx": $$$$$$$$8,
+    "deco-sites/xpto/sections/Footer/Footer.tsx": $$$$$$$$9,
+    "deco-sites/xpto/sections/Header/Header.tsx": $$$$$$$$10,
+    "deco-sites/xpto/sections/Images/BannerGrid.tsx": $$$$$$$$11,
+    "deco-sites/xpto/sections/Images/Carousel.tsx": $$$$$$$$12,
+    "deco-sites/xpto/sections/Images/ImageGallery.tsx": $$$$$$$$13,
+    "deco-sites/xpto/sections/Images/ShoppableBanner.tsx": $$$$$$$$14,
+    "deco-sites/xpto/sections/Links/LinkTree.tsx": $$$$$$$$15,
+    "deco-sites/xpto/sections/Links/Shortcuts.tsx": $$$$$$$$16,
+    "deco-sites/xpto/sections/Miscellaneous/CampaignTimer.tsx": $$$$$$$$17,
+    "deco-sites/xpto/sections/Miscellaneous/CookieConsent.tsx": $$$$$$$$18,
+    "deco-sites/xpto/sections/Newsletter/Newsletter.tsx": $$$$$$$$19,
+    "deco-sites/xpto/sections/Product/ProductDetails.tsx": $$$$$$$$20,
+    "deco-sites/xpto/sections/Product/ProductShelf.tsx": $$$$$$$$21,
+    "deco-sites/xpto/sections/Product/SearchResult.tsx": $$$$$$$$22,
+    "deco-sites/xpto/sections/Product/Wishlist.tsx": $$$$$$$$23,
+    "deco-sites/xpto/sections/Social/InstagramPosts.tsx": $$$$$$$$24,
+    "deco-sites/xpto/sections/Social/WhatsApp.tsx": $$$$$$$$25,
   },
   "loaders": {
     "$live/loaders/state.ts": i2$$$0,
@@ -348,15 +363,6 @@ const manifest = {
     "deco-sites/std/functions/vtexProductListingPage.ts": i2$24,
     "deco-sites/std/functions/vtexSuggestions.ts": i2$25,
     "deco-sites/std/functions/vtexWishlist.ts": i2$26,
-  },
-  "accounts": {
-    "deco-sites/std/accounts/linxImpulse.ts": i2$$0,
-    "deco-sites/std/accounts/nuvemShop.ts": i2$$1,
-    "deco-sites/std/accounts/occ.ts": i2$$2,
-    "deco-sites/std/accounts/shopify.ts": i2$$3,
-    "deco-sites/std/accounts/vnda.ts": i2$$4,
-    "deco-sites/std/accounts/vtex.ts": i2$$5,
-    "deco-sites/std/accounts/yourViews.ts": i2$$6,
   },
   "baseUrl": import.meta.url,
 };
