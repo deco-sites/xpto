@@ -120,6 +120,12 @@
               "deco-sites/xpto/sections/Images/Carousel.tsx",
               "deco-sites/xpto/sections/Images/ImageGallery.tsx",
               "deco-sites/xpto/sections/Images/ShoppableBanner.tsx",
+              "deco-sites/xpto/sections/Institutional/AccordionsContent.tsx",
+              "deco-sites/xpto/sections/Institutional/AsideMenu.tsx",
+              "deco-sites/xpto/sections/Institutional/CardsContent.tsx",
+              "deco-sites/xpto/sections/Institutional/ContactForm.tsx",
+              "deco-sites/xpto/sections/Institutional/InstitutionalPage.tsx",
+              "deco-sites/xpto/sections/Institutional/TextContent.tsx",
               "deco-sites/xpto/sections/Links/LinkTree.tsx",
               "deco-sites/xpto/sections/Links/Shortcuts.tsx",
               "deco-sites/xpto/sections/Miscellaneous/CampaignTimer.tsx",
@@ -8829,11 +8835,6 @@
                   },
                   {
                     "type": "string",
-                    "const": "Facebook",
-                    "default": "Facebook"
-                  },
-                  {
-                    "type": "string",
                     "const": "FilterList",
                     "default": "FilterList"
                   },
@@ -8879,11 +8880,6 @@
                   },
                   {
                     "type": "string",
-                    "const": "Instagram",
-                    "default": "Instagram"
-                  },
-                  {
-                    "type": "string",
                     "const": "LayoutGrid1",
                     "default": "LayoutGrid1"
                   },
@@ -8906,11 +8902,6 @@
                     "type": "string",
                     "const": "Link",
                     "default": "Link"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Linkedin",
-                    "default": "Linkedin"
                   },
                   {
                     "type": "string",
@@ -9069,16 +9060,6 @@
                   },
                   {
                     "type": "string",
-                    "const": "Tiktok",
-                    "default": "Tiktok"
-                  },
-                  {
-                    "type": "string",
-                    "const": "TikTok",
-                    "default": "TikTok"
-                  },
-                  {
-                    "type": "string",
                     "const": "Trash",
                     "default": "Trash"
                   },
@@ -9086,11 +9067,6 @@
                     "type": "string",
                     "const": "Truck",
                     "default": "Truck"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Twitter",
-                    "default": "Twitter"
                   },
                   {
                     "type": "string",
@@ -9109,18 +9085,8 @@
                   },
                   {
                     "type": "string",
-                    "const": "WhatsApp",
-                    "default": "WhatsApp"
-                  },
-                  {
-                    "type": "string",
                     "const": "XMark",
                     "default": "XMark"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Youtube",
-                    "default": "Youtube"
                   },
                   {
                     "type": "string",
@@ -11659,6 +11625,818 @@
       ],
       "title": "deco-sites/xpto/sections/Images/ShoppableBanner.tsx@Props"
     },
+    "bW91cmFkYW5pZWwvc3RkL2NvbXBvbmVudHMvdHlwZXMudHM=@HTML": {
+      "type": "string",
+      "format": "html",
+      "title": "HTML"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9BY2NvcmRpb25zQ29udGVudC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "accordions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "content": {
+                "$ref": "#/definitions/bW91cmFkYW5pZWwvc3RkL2NvbXBvbmVudHMvdHlwZXMudHM=@HTML",
+                "title": "Content"
+              }
+            },
+            "required": [
+              "label",
+              "content"
+            ]
+          },
+          "title": "Accordions"
+        }
+      },
+      "required": [
+        "accordions"
+      ],
+      "title": "deco-sites/xpto/components/institutional/AccordionsContent.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9Bc2lkZU1lbnUudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "menuItems": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "href": {
+                "type": "string",
+                "title": "Href"
+              }
+            },
+            "required": [
+              "label",
+              "href"
+            ]
+          },
+          "title": "Menu Items"
+        }
+      },
+      "required": [
+        "menuItems"
+      ],
+      "title": "deco-sites/xpto/components/institutional/AsideMenu.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvdWkvSWNvbi50c3g=@PaymentIcons": {
+      "title": "PaymentIcons"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvdWkvSWNvbi50c3g=@0786c500f9209ed75b514ad91b08548a|0bde4821850e759911e774cf1b685557|0c0378f260ceb70242bb4f0401ab8d91|12e0d0083b7834b0f96c53de89c8c60e|1440bba0efb18acfb0b722f27cfb2c95|184523751eed57a06a978c730b6ea610|187ac7b1506782df4d515f678a213348|1a0e295833246f3d3c943f22d637e15a|1aa80c90ecb2263199429d9836382d0e|1cb688e7b0d3850614bd455a77466fb0|1da74b89cf5b972118f69ddb47894653|24110d50869d0a45022f64036e9ec8a1|251060795b4b031139b5b2389f5230b3|28abdd72c3e395507b92185d00b4d68d|2ea921a78e2b655eee245ebcfcbfc968|335c2304c44938c6b6c0212fd1c89866|380e1f889df042e8112cea21fbd01cc2|3af375cfb90d2c82429cab2543a9012c|4048399fcd1fe9eb79b03d7ef740145a|414557786e3feffe32e087a643760e6d|45765cf630630b8ddcc477b0efb3a697|45adb1d6d4580a01bd7ded6bc78b00e6|45b096d5486a6dc3b78d08285d377bf5|528c52461de725ce02f5e35af8baf304|542e41ed54ee8577bff5c93fc0c1dfe2|5bd0117754813bb2805ce339871b2b90|636146148117d4bff400571794a1cf7f|66f6bf7ff97f230afc30f31b5b8aa1c3|688b431e0c07d0ef3cd57f269bc8e7ad|704659e630eebfc3a1419641b4741f9c|757286b78f834850966e63eed89f31e7|770a28c172c38339eb82d87d9280e524|7f3393f33842b1057a1db272fef865a2|8148d6eb101da19ddf9bd21052ba0c83|839d757acf68f8720d7a32aa343ca4ea|86b5c80c03d2de86a25fd1bffe6ee490|8cf506feb4af8ddb4ac79731c523e912|949179227eb7981f39389d742fab1ebe|9bcde37e6cc087bc0a0372ec891eea1f|9d140f99d286fe692f71381c6087a34a|9d7d80907fd0dae9fcb12ef36ceec311|9e019c48ca30e8265a50a38d8f6fd417|a12dfd1c4dd15770393550c3c881d221|a20d5eb84366b22570b82e170514a3f7|a3476e88fb8ecc98b3e10b19c8fd6c3b|a4e1ec89eb4f36f0efa9e6d059eaba43|abb99cc6188c3618e5f27dde711c7c8b|ac57e3d40b108feb4343433720638cf6|b01fd178163596ef2c77fca891116e6a|b15d2dcca97e25748638c4a76c3d95e8|b2826225e78926279bb1d52b6185f923|b48396ef0cf718e0275ffd147337812b|b533945a534280544539d09926641c4a|b8b91d1083e949b0bfb066aa174c7422|b90ef9b7a85861bb093bc21c7c496e5b|c94e80cafc3292ee1713bd560894910c|cf86620d1aa00db935c8bfe9fffe191e|d0a1238f7256f8e21c8cfc150ea87b4f|d4a87f23175bc1f4e4c4b528a91af373|d6d3379d5fdf903457971fe55b346e39|d6e14916a10ac82982e4125333ee1149|d70d19c8b882f07f72bd1321a366b633|d7124b1deb0e40c2949806b3d5e84c36|d79c31dfc5e165c85da07d57aa299028|e0820b76053bf5cec76c336615dda1d7|e2f301621e5aff603259009912efa5f9|e328d8dd1a8f9fc66d4bbfe0fda7efae|e7ebd7958687a681eed9f9d7a92c0f17|eaff23296a7dfbf040765df6cc08ed3a|f090389615d18af73a752dc5bab58098|f33a5e37cca0d36328a4ef91ff7ea04f|f735d87c7474d9267a292e2985fbda1e|f81510e32a97b0473b5b23bd7965ab32|facc149eddb4338c55f9efbbe9d6e4b2|fb73058b03ada62ab245151a1aa13b51|febbae5221a31969d2759a43b740a53f|1a9bf5775fc9cfa990c81e0818cb8eb4|2ce31ce7cfcfdbef6ffe43359359f136|3104a491160ef26c3e564988072b0ca6|405f90935d78e4a84a6419fc793b1c98|49bb77d4c1ed7df7eea2fe396007c30f|8d378d90756d01c58159b96a6b5199cb|bf54579120a20e7ae49ebcfc7b263d13|c2c52d01482ad3b48ea11ea41835e2f3|caf67209cf8bc04bcadfef257750844d|d986370461c901ce643281f32d8b67c6|ddf3cf37a1b88919f7a817531ef202ab|de69fcdc92bed6e8f87acf676d6e44d7|PaymentIcons": {
+      "anyOf": [
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "Apple",
+              "default": "Apple"
+            },
+            {
+              "type": "string",
+              "const": "ArrowsPointingOut",
+              "default": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "ArrowRight",
+              "default": "ArrowRight"
+            },
+            {
+              "type": "string",
+              "const": "Bars3",
+              "default": "Bars3"
+            },
+            {
+              "type": "string",
+              "const": "BigCommerce",
+              "default": "BigCommerce"
+            },
+            {
+              "type": "string",
+              "const": "BuildingStore",
+              "default": "BuildingStore"
+            },
+            {
+              "type": "string",
+              "const": "Cart",
+              "default": "Cart"
+            },
+            {
+              "type": "string",
+              "const": "Check",
+              "default": "Check"
+            },
+            {
+              "type": "string",
+              "const": "ChevronDown",
+              "default": "ChevronDown"
+            },
+            {
+              "type": "string",
+              "const": "ChevronLeft",
+              "default": "ChevronLeft"
+            },
+            {
+              "type": "string",
+              "const": "ChevronRight",
+              "default": "ChevronRight"
+            },
+            {
+              "type": "string",
+              "const": "ChevronUp",
+              "default": "ChevronUp"
+            },
+            {
+              "type": "string",
+              "const": "ClockHour4",
+              "default": "ClockHour4"
+            },
+            {
+              "type": "string",
+              "const": "Cookie",
+              "default": "Cookie"
+            },
+            {
+              "type": "string",
+              "const": "CreditCard",
+              "default": "CreditCard"
+            },
+            {
+              "type": "string",
+              "const": "Deco",
+              "default": "Deco"
+            },
+            {
+              "type": "string",
+              "const": "DecoLogo",
+              "default": "DecoLogo"
+            },
+            {
+              "type": "string",
+              "const": "Diners",
+              "default": "Diners"
+            },
+            {
+              "type": "string",
+              "const": "Discord",
+              "default": "Discord"
+            },
+            {
+              "type": "string",
+              "const": "Discount",
+              "default": "Discount"
+            },
+            {
+              "type": "string",
+              "const": "Edit",
+              "default": "Edit"
+            },
+            {
+              "type": "string",
+              "const": "Elo",
+              "default": "Elo"
+            },
+            {
+              "type": "string",
+              "const": "Equal",
+              "default": "Equal"
+            },
+            {
+              "type": "string",
+              "const": "Eye",
+              "default": "Eye"
+            },
+            {
+              "type": "string",
+              "const": "FilterList",
+              "default": "FilterList"
+            },
+            {
+              "type": "string",
+              "const": "Flame",
+              "default": "Flame"
+            },
+            {
+              "type": "string",
+              "const": "Gift",
+              "default": "Gift"
+            },
+            {
+              "type": "string",
+              "const": "Google",
+              "default": "Google"
+            },
+            {
+              "type": "string",
+              "const": "Hanger",
+              "default": "Hanger"
+            },
+            {
+              "type": "string",
+              "const": "HandPinch",
+              "default": "HandPinch"
+            },
+            {
+              "type": "string",
+              "const": "Headset",
+              "default": "Headset"
+            },
+            {
+              "type": "string",
+              "const": "Heart",
+              "default": "Heart"
+            },
+            {
+              "type": "string",
+              "const": "Heart2",
+              "default": "Heart2"
+            },
+            {
+              "type": "string",
+              "const": "LayoutGrid1",
+              "default": "LayoutGrid1"
+            },
+            {
+              "type": "string",
+              "const": "LayoutGrid2",
+              "default": "LayoutGrid2"
+            },
+            {
+              "type": "string",
+              "const": "LayoutGrid3",
+              "default": "LayoutGrid3"
+            },
+            {
+              "type": "string",
+              "const": "LayoutGrid4",
+              "default": "LayoutGrid4"
+            },
+            {
+              "type": "string",
+              "const": "Link",
+              "default": "Link"
+            },
+            {
+              "type": "string",
+              "const": "List",
+              "default": "List"
+            },
+            {
+              "type": "string",
+              "const": "Logo",
+              "default": "Logo"
+            },
+            {
+              "type": "string",
+              "const": "Magento",
+              "default": "Magento"
+            },
+            {
+              "type": "string",
+              "const": "Mail",
+              "default": "Mail"
+            },
+            {
+              "type": "string",
+              "const": "MapPin",
+              "default": "MapPin"
+            },
+            {
+              "type": "string",
+              "const": "Mastercard",
+              "default": "Mastercard"
+            },
+            {
+              "type": "string",
+              "const": "Message",
+              "default": "Message"
+            },
+            {
+              "type": "string",
+              "const": "Minus",
+              "default": "Minus"
+            },
+            {
+              "type": "string",
+              "const": "Oracle",
+              "default": "Oracle"
+            },
+            {
+              "type": "string",
+              "const": "Phone",
+              "default": "Phone"
+            },
+            {
+              "type": "string",
+              "const": "Photo",
+              "default": "Photo"
+            },
+            {
+              "type": "string",
+              "const": "Pix",
+              "default": "Pix"
+            },
+            {
+              "type": "string",
+              "const": "Plus",
+              "default": "Plus"
+            },
+            {
+              "type": "string",
+              "const": "QuestionMarkCircle",
+              "default": "QuestionMarkCircle"
+            },
+            {
+              "type": "string",
+              "const": "Refresh",
+              "default": "Refresh"
+            },
+            {
+              "type": "string",
+              "const": "Reload",
+              "default": "Reload"
+            },
+            {
+              "type": "string",
+              "const": "Return",
+              "default": "Return"
+            },
+            {
+              "type": "string",
+              "const": "Ruler",
+              "default": "Ruler"
+            },
+            {
+              "type": "string",
+              "const": "Salesforce",
+              "default": "Salesforce"
+            },
+            {
+              "type": "string",
+              "const": "Search",
+              "default": "Search"
+            },
+            {
+              "type": "string",
+              "const": "Send",
+              "default": "Send"
+            },
+            {
+              "type": "string",
+              "const": "Share",
+              "default": "Share"
+            },
+            {
+              "type": "string",
+              "const": "Shopify",
+              "default": "Shopify"
+            },
+            {
+              "type": "string",
+              "const": "ShoppingCart",
+              "default": "ShoppingCart"
+            },
+            {
+              "type": "string",
+              "const": "SocialLinkedin",
+              "default": "SocialLinkedin"
+            },
+            {
+              "type": "string",
+              "const": "SocialTwitter",
+              "default": "SocialTwitter"
+            },
+            {
+              "type": "string",
+              "const": "Star",
+              "default": "Star"
+            },
+            {
+              "type": "string",
+              "const": "Star1",
+              "default": "Star1"
+            },
+            {
+              "type": "string",
+              "const": "Tag",
+              "default": "Tag"
+            },
+            {
+              "type": "string",
+              "const": "ThumbDown",
+              "default": "ThumbDown"
+            },
+            {
+              "type": "string",
+              "const": "ThumbUp",
+              "default": "ThumbUp"
+            },
+            {
+              "type": "string",
+              "const": "Trash",
+              "default": "Trash"
+            },
+            {
+              "type": "string",
+              "const": "Truck",
+              "default": "Truck"
+            },
+            {
+              "type": "string",
+              "const": "User",
+              "default": "User"
+            },
+            {
+              "type": "string",
+              "const": "Visa",
+              "default": "Visa"
+            },
+            {
+              "type": "string",
+              "const": "VTEX",
+              "default": "VTEX"
+            },
+            {
+              "type": "string",
+              "const": "XMark",
+              "default": "XMark"
+            },
+            {
+              "type": "string",
+              "const": "Zoom",
+              "default": "Zoom"
+            }
+          ],
+          "type": "string"
+        },
+        {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "Twitter",
+              "default": "Twitter"
+            },
+            {
+              "type": "string",
+              "const": "Linkedin",
+              "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "Pinterest",
+              "default": "Pinterest"
+            },
+            {
+              "type": "string",
+              "const": "Youtube",
+              "default": "Youtube"
+            },
+            {
+              "type": "string",
+              "const": "Tiktok",
+              "default": "Tiktok"
+            },
+            {
+              "type": "string",
+              "const": "WhatsApp",
+              "default": "WhatsApp"
+            },
+            {
+              "type": "string",
+              "const": "Instagram",
+              "default": "Instagram"
+            },
+            {
+              "type": "string",
+              "const": "Facebook",
+              "default": "Facebook"
+            },
+            {
+              "type": "string",
+              "const": "YouTubeOutline",
+              "default": "YouTubeOutline"
+            },
+            {
+              "type": "string",
+              "const": "WhatsAppOutline",
+              "default": "WhatsAppOutline"
+            },
+            {
+              "type": "string",
+              "const": "InstagramOutline",
+              "default": "InstagramOutline"
+            },
+            {
+              "type": "string",
+              "const": "FacebookOutline",
+              "default": "FacebookOutline"
+            }
+          ],
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvdWkvSWNvbi50c3g=@PaymentIcons"
+        }
+      ],
+      "title": "0786c500f9209ed75b514ad91b08548a|0bde4821850e759911e774cf1b685557|0c0378f260ceb70242bb4f0401ab8d91|12e0d0083b7834b0f96c53de89c8c60e|1440bba0efb18acfb0b722f27cfb2c95|184523751eed57a06a978c730b6ea610|187ac7b1506782df4d515f678a213348|1a0e295833246f3d3c943f22d637e15a|1aa80c90ecb2263199429d9836382d0e|1cb688e7b0d3850614bd455a77466fb0|1da74b89cf5b972118f69ddb47894653|24110d50869d0a45022f64036e9ec8a1|251060795b4b031139b5b2389f5230b3|28abdd72c3e395507b92185d00b4d68d|2ea921a78e2b655eee245ebcfcbfc968|335c2304c44938c6b6c0212fd1c89866|380e1f889df042e8112cea21fbd01cc2|3af375cfb90d2c82429cab2543a9012c|4048399fcd1fe9eb79b03d7ef740145a|414557786e3feffe32e087a643760e6d|45765cf630630b8ddcc477b0efb3a697|45adb1d6d4580a01bd7ded6bc78b00e6|45b096d5486a6dc3b78d08285d377bf5|528c52461de725ce02f5e35af8baf304|542e41ed54ee8577bff5c93fc0c1dfe2|5bd0117754813bb2805ce339871b2b90|636146148117d4bff400571794a1cf7f|66f6bf7ff97f230afc30f31b5b8aa1c3|688b431e0c07d0ef3cd57f269bc8e7ad|704659e630eebfc3a1419641b4741f9c|757286b78f834850966e63eed89f31e7|770a28c172c38339eb82d87d9280e524|7f3393f33842b1057a1db272fef865a2|8148d6eb101da19ddf9bd21052ba0c83|839d757acf68f8720d7a32aa343ca4ea|86b5c80c03d2de86a25fd1bffe6ee490|8cf506feb4af8ddb4ac79731c523e912|949179227eb7981f39389d742fab1ebe|9bcde37e6cc087bc0a0372ec891eea1f|9d140f99d286fe692f71381c6087a34a|9d7d80907fd0dae9fcb12ef36ceec311|9e019c48ca30e8265a50a38d8f6fd417|a12dfd1c4dd15770393550c3c881d221|a20d5eb84366b22570b82e170514a3f7|a3476e88fb8ecc98b3e10b19c8fd6c3b|a4e1ec89eb4f36f0efa9e6d059eaba43|abb99cc6188c3618e5f27dde711c7c8b|ac57e3d40b108feb4343433720638cf6|b01fd178163596ef2c77fca891116e6a|b15d2dcca97e25748638c4a76c3d95e8|b2826225e78926279bb1d52b6185f923|b48396ef0cf718e0275ffd147337812b|b533945a534280544539d09926641c4a|b8b91d1083e949b0bfb066aa174c7422|b90ef9b7a85861bb093bc21c7c496e5b|c94e80cafc3292ee1713bd560894910c|cf86620d1aa00db935c8bfe9fffe191e|d0a1238f7256f8e21c8cfc150ea87b4f|d4a87f23175bc1f4e4c4b528a91af373|d6d3379d5fdf903457971fe55b346e39|d6e14916a10ac82982e4125333ee1149|d70d19c8b882f07f72bd1321a366b633|d7124b1deb0e40c2949806b3d5e84c36|d79c31dfc5e165c85da07d57aa299028|e0820b76053bf5cec76c336615dda1d7|e2f301621e5aff603259009912efa5f9|e328d8dd1a8f9fc66d4bbfe0fda7efae|e7ebd7958687a681eed9f9d7a92c0f17|eaff23296a7dfbf040765df6cc08ed3a|f090389615d18af73a752dc5bab58098|f33a5e37cca0d36328a4ef91ff7ea04f|f735d87c7474d9267a292e2985fbda1e|f81510e32a97b0473b5b23bd7965ab32|facc149eddb4338c55f9efbbe9d6e4b2|fb73058b03ada62ab245151a1aa13b51|febbae5221a31969d2759a43b740a53f|1a9bf5775fc9cfa990c81e0818cb8eb4|2ce31ce7cfcfdbef6ffe43359359f136|3104a491160ef26c3e564988072b0ca6|405f90935d78e4a84a6419fc793b1c98|49bb77d4c1ed7df7eea2fe396007c30f|8d378d90756d01c58159b96a6b5199cb|bf54579120a20e7ae49ebcfc7b263d13|c2c52d01482ad3b48ea11ea41835e2f3|caf67209cf8bc04bcadfef257750844d|d986370461c901ce643281f32d8b67c6|ddf3cf37a1b88919f7a817531ef202ab|de69fcdc92bed6e8f87acf676d6e44d7|PaymentIcons"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9DYXJkc0NvbnRlbnQudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "cards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "heading": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "title": "Title"
+                  },
+                  "icon": {
+                    "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvdWkvSWNvbi50c3g=@0786c500f9209ed75b514ad91b08548a|0bde4821850e759911e774cf1b685557|0c0378f260ceb70242bb4f0401ab8d91|12e0d0083b7834b0f96c53de89c8c60e|1440bba0efb18acfb0b722f27cfb2c95|184523751eed57a06a978c730b6ea610|187ac7b1506782df4d515f678a213348|1a0e295833246f3d3c943f22d637e15a|1aa80c90ecb2263199429d9836382d0e|1cb688e7b0d3850614bd455a77466fb0|1da74b89cf5b972118f69ddb47894653|24110d50869d0a45022f64036e9ec8a1|251060795b4b031139b5b2389f5230b3|28abdd72c3e395507b92185d00b4d68d|2ea921a78e2b655eee245ebcfcbfc968|335c2304c44938c6b6c0212fd1c89866|380e1f889df042e8112cea21fbd01cc2|3af375cfb90d2c82429cab2543a9012c|4048399fcd1fe9eb79b03d7ef740145a|414557786e3feffe32e087a643760e6d|45765cf630630b8ddcc477b0efb3a697|45adb1d6d4580a01bd7ded6bc78b00e6|45b096d5486a6dc3b78d08285d377bf5|528c52461de725ce02f5e35af8baf304|542e41ed54ee8577bff5c93fc0c1dfe2|5bd0117754813bb2805ce339871b2b90|636146148117d4bff400571794a1cf7f|66f6bf7ff97f230afc30f31b5b8aa1c3|688b431e0c07d0ef3cd57f269bc8e7ad|704659e630eebfc3a1419641b4741f9c|757286b78f834850966e63eed89f31e7|770a28c172c38339eb82d87d9280e524|7f3393f33842b1057a1db272fef865a2|8148d6eb101da19ddf9bd21052ba0c83|839d757acf68f8720d7a32aa343ca4ea|86b5c80c03d2de86a25fd1bffe6ee490|8cf506feb4af8ddb4ac79731c523e912|949179227eb7981f39389d742fab1ebe|9bcde37e6cc087bc0a0372ec891eea1f|9d140f99d286fe692f71381c6087a34a|9d7d80907fd0dae9fcb12ef36ceec311|9e019c48ca30e8265a50a38d8f6fd417|a12dfd1c4dd15770393550c3c881d221|a20d5eb84366b22570b82e170514a3f7|a3476e88fb8ecc98b3e10b19c8fd6c3b|a4e1ec89eb4f36f0efa9e6d059eaba43|abb99cc6188c3618e5f27dde711c7c8b|ac57e3d40b108feb4343433720638cf6|b01fd178163596ef2c77fca891116e6a|b15d2dcca97e25748638c4a76c3d95e8|b2826225e78926279bb1d52b6185f923|b48396ef0cf718e0275ffd147337812b|b533945a534280544539d09926641c4a|b8b91d1083e949b0bfb066aa174c7422|b90ef9b7a85861bb093bc21c7c496e5b|c94e80cafc3292ee1713bd560894910c|cf86620d1aa00db935c8bfe9fffe191e|d0a1238f7256f8e21c8cfc150ea87b4f|d4a87f23175bc1f4e4c4b528a91af373|d6d3379d5fdf903457971fe55b346e39|d6e14916a10ac82982e4125333ee1149|d70d19c8b882f07f72bd1321a366b633|d7124b1deb0e40c2949806b3d5e84c36|d79c31dfc5e165c85da07d57aa299028|e0820b76053bf5cec76c336615dda1d7|e2f301621e5aff603259009912efa5f9|e328d8dd1a8f9fc66d4bbfe0fda7efae|e7ebd7958687a681eed9f9d7a92c0f17|eaff23296a7dfbf040765df6cc08ed3a|f090389615d18af73a752dc5bab58098|f33a5e37cca0d36328a4ef91ff7ea04f|f735d87c7474d9267a292e2985fbda1e|f81510e32a97b0473b5b23bd7965ab32|facc149eddb4338c55f9efbbe9d6e4b2|fb73058b03ada62ab245151a1aa13b51|febbae5221a31969d2759a43b740a53f|1a9bf5775fc9cfa990c81e0818cb8eb4|2ce31ce7cfcfdbef6ffe43359359f136|3104a491160ef26c3e564988072b0ca6|405f90935d78e4a84a6419fc793b1c98|49bb77d4c1ed7df7eea2fe396007c30f|8d378d90756d01c58159b96a6b5199cb|bf54579120a20e7ae49ebcfc7b263d13|c2c52d01482ad3b48ea11ea41835e2f3|caf67209cf8bc04bcadfef257750844d|d986370461c901ce643281f32d8b67c6|ddf3cf37a1b88919f7a817531ef202ab|de69fcdc92bed6e8f87acf676d6e44d7|PaymentIcons",
+                    "title": "Icon"
+                  }
+                },
+                "required": [
+                  "title"
+                ],
+                "title": "Heading"
+              },
+              "content": {
+                "type": "object",
+                "properties": {
+                  "subtitle": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "title": "Subtitle"
+                  },
+                  "paragraphs": {
+                    "type": "array",
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "title": "Paragraphs"
+                  }
+                },
+                "required": [],
+                "title": "Content"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label"
+                    },
+                    "url": {
+                      "type": "string",
+                      "title": "Url"
+                    },
+                    "icon": {
+                      "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvdWkvSWNvbi50c3g=@0786c500f9209ed75b514ad91b08548a|0bde4821850e759911e774cf1b685557|0c0378f260ceb70242bb4f0401ab8d91|12e0d0083b7834b0f96c53de89c8c60e|1440bba0efb18acfb0b722f27cfb2c95|184523751eed57a06a978c730b6ea610|187ac7b1506782df4d515f678a213348|1a0e295833246f3d3c943f22d637e15a|1aa80c90ecb2263199429d9836382d0e|1cb688e7b0d3850614bd455a77466fb0|1da74b89cf5b972118f69ddb47894653|24110d50869d0a45022f64036e9ec8a1|251060795b4b031139b5b2389f5230b3|28abdd72c3e395507b92185d00b4d68d|2ea921a78e2b655eee245ebcfcbfc968|335c2304c44938c6b6c0212fd1c89866|380e1f889df042e8112cea21fbd01cc2|3af375cfb90d2c82429cab2543a9012c|4048399fcd1fe9eb79b03d7ef740145a|414557786e3feffe32e087a643760e6d|45765cf630630b8ddcc477b0efb3a697|45adb1d6d4580a01bd7ded6bc78b00e6|45b096d5486a6dc3b78d08285d377bf5|528c52461de725ce02f5e35af8baf304|542e41ed54ee8577bff5c93fc0c1dfe2|5bd0117754813bb2805ce339871b2b90|636146148117d4bff400571794a1cf7f|66f6bf7ff97f230afc30f31b5b8aa1c3|688b431e0c07d0ef3cd57f269bc8e7ad|704659e630eebfc3a1419641b4741f9c|757286b78f834850966e63eed89f31e7|770a28c172c38339eb82d87d9280e524|7f3393f33842b1057a1db272fef865a2|8148d6eb101da19ddf9bd21052ba0c83|839d757acf68f8720d7a32aa343ca4ea|86b5c80c03d2de86a25fd1bffe6ee490|8cf506feb4af8ddb4ac79731c523e912|949179227eb7981f39389d742fab1ebe|9bcde37e6cc087bc0a0372ec891eea1f|9d140f99d286fe692f71381c6087a34a|9d7d80907fd0dae9fcb12ef36ceec311|9e019c48ca30e8265a50a38d8f6fd417|a12dfd1c4dd15770393550c3c881d221|a20d5eb84366b22570b82e170514a3f7|a3476e88fb8ecc98b3e10b19c8fd6c3b|a4e1ec89eb4f36f0efa9e6d059eaba43|abb99cc6188c3618e5f27dde711c7c8b|ac57e3d40b108feb4343433720638cf6|b01fd178163596ef2c77fca891116e6a|b15d2dcca97e25748638c4a76c3d95e8|b2826225e78926279bb1d52b6185f923|b48396ef0cf718e0275ffd147337812b|b533945a534280544539d09926641c4a|b8b91d1083e949b0bfb066aa174c7422|b90ef9b7a85861bb093bc21c7c496e5b|c94e80cafc3292ee1713bd560894910c|cf86620d1aa00db935c8bfe9fffe191e|d0a1238f7256f8e21c8cfc150ea87b4f|d4a87f23175bc1f4e4c4b528a91af373|d6d3379d5fdf903457971fe55b346e39|d6e14916a10ac82982e4125333ee1149|d70d19c8b882f07f72bd1321a366b633|d7124b1deb0e40c2949806b3d5e84c36|d79c31dfc5e165c85da07d57aa299028|e0820b76053bf5cec76c336615dda1d7|e2f301621e5aff603259009912efa5f9|e328d8dd1a8f9fc66d4bbfe0fda7efae|e7ebd7958687a681eed9f9d7a92c0f17|eaff23296a7dfbf040765df6cc08ed3a|f090389615d18af73a752dc5bab58098|f33a5e37cca0d36328a4ef91ff7ea04f|f735d87c7474d9267a292e2985fbda1e|f81510e32a97b0473b5b23bd7965ab32|facc149eddb4338c55f9efbbe9d6e4b2|fb73058b03ada62ab245151a1aa13b51|febbae5221a31969d2759a43b740a53f|1a9bf5775fc9cfa990c81e0818cb8eb4|2ce31ce7cfcfdbef6ffe43359359f136|3104a491160ef26c3e564988072b0ca6|405f90935d78e4a84a6419fc793b1c98|49bb77d4c1ed7df7eea2fe396007c30f|8d378d90756d01c58159b96a6b5199cb|bf54579120a20e7ae49ebcfc7b263d13|c2c52d01482ad3b48ea11ea41835e2f3|caf67209cf8bc04bcadfef257750844d|d986370461c901ce643281f32d8b67c6|ddf3cf37a1b88919f7a817531ef202ab|de69fcdc92bed6e8f87acf676d6e44d7|PaymentIcons",
+                      "title": "Icon"
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "url"
+                  ]
+                },
+                "title": "Links"
+              }
+            },
+            "required": [
+              "heading",
+              "content",
+              "links"
+            ]
+          },
+          "title": "Cards"
+        }
+      },
+      "required": [
+        "cards"
+      ],
+      "title": "deco-sites/xpto/components/institutional/CardsContent.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvZm9vdGVyL1NvY2lhbE5ldFdvcmtzLnRzeA==@SocialItem": {
+      "type": "object",
+      "properties": {
+        "icon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "Twitter",
+              "default": "Twitter"
+            },
+            {
+              "type": "string",
+              "const": "Linkedin",
+              "default": "Linkedin"
+            },
+            {
+              "type": "string",
+              "const": "Pinterest",
+              "default": "Pinterest"
+            },
+            {
+              "type": "string",
+              "const": "Youtube",
+              "default": "Youtube"
+            },
+            {
+              "type": "string",
+              "const": "Tiktok",
+              "default": "Tiktok"
+            },
+            {
+              "type": "string",
+              "const": "WhatsApp",
+              "default": "WhatsApp"
+            },
+            {
+              "type": "string",
+              "const": "Instagram",
+              "default": "Instagram"
+            },
+            {
+              "type": "string",
+              "const": "Facebook",
+              "default": "Facebook"
+            },
+            {
+              "type": "string",
+              "const": "YouTubeOutline",
+              "default": "YouTubeOutline"
+            },
+            {
+              "type": "string",
+              "const": "WhatsAppOutline",
+              "default": "WhatsAppOutline"
+            },
+            {
+              "type": "string",
+              "const": "InstagramOutline",
+              "default": "InstagramOutline"
+            },
+            {
+              "type": "string",
+              "const": "FacebookOutline",
+              "default": "FacebookOutline"
+            }
+          ],
+          "type": "string",
+          "title": "Icon"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "href": {
+          "type": "string",
+          "title": "Href"
+        }
+      },
+      "required": [
+        "icon",
+        "label",
+        "href"
+      ],
+      "title": "SocialItem"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvZm9vdGVyL1NvY2lhbE5ldFdvcmtzLnRzeA==@SocialItem[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvZm9vdGVyL1NvY2lhbE5ldFdvcmtzLnRzeA==@SocialItem"
+      },
+      "title": "SocialItem[]"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9Db250YWN0Rm9ybS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "serviceInfo": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "title": "Title"
+            },
+            "email": {
+              "type": "string",
+              "title": "Email"
+            },
+            "phone": {
+              "type": "string",
+              "title": "Phone"
+            },
+            "schedule": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "title": "Schedule"
+            }
+          },
+          "required": [
+            "title",
+            "email",
+            "phone",
+            "schedule"
+          ],
+          "title": "Service Info"
+        },
+        "image": {
+          "$ref": "#/definitions/bW91cmFkYW5pZWwvc3RkL2NvbXBvbmVudHMvdHlwZXMudHM=@Image",
+          "description": "Banner image that stays on top of the contact form",
+          "title": "Image"
+        },
+        "alt": {
+          "type": "string",
+          "description": "Alternative text description for the image",
+          "title": "Alt"
+        },
+        "socialNetworks": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvZm9vdGVyL1NvY2lhbE5ldFdvcmtzLnRzeA==@SocialItem[]",
+          "title": "Social Networks"
+        }
+      },
+      "required": [
+        "image",
+        "alt"
+      ],
+      "title": "deco-sites/xpto/components/institutional/ContactForm.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9JbnN0aXR1dGlvbmFsUGFnZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "asideMenu": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section",
+          "title": "Aside Menu"
+        },
+        "content": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9ib2lsZXJwbGF0ZW4xL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvVGV4dENvbnRlbnQudHN4"
+            },
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9ib2lsZXJwbGF0ZW4xL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQWNjb3JkaW9uc0NvbnRlbnQudHN4"
+            },
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9ib2lsZXJwbGF0ZW4xL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQ2FyZHNDb250ZW50LnRzeA=="
+            },
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9ib2lsZXJwbGF0ZW4xL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQ29udGFjdEZvcm0udHN4"
+            }
+          ],
+          "title": "Content"
+        }
+      },
+      "required": [
+        "title",
+        "asideMenu",
+        "content"
+      ],
+      "title": "deco-sites/xpto/components/institutional/InstitutionalPage.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9UZXh0Q29udGVudC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "$ref": "#/definitions/bW91cmFkYW5pZWwvc3RkL2NvbXBvbmVudHMvdHlwZXMudHM=@HTML",
+          "description": "Content will be rendered as markdown.",
+          "title": "Content"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "title": "deco-sites/xpto/components/institutional/TextContent.tsx@Props"
+    },
     "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvdWkvTGlua1RyZWUudHN4@Link": {
       "type": "object",
       "properties": {
@@ -11892,11 +12670,6 @@
             },
             {
               "type": "string",
-              "const": "Facebook",
-              "default": "Facebook"
-            },
-            {
-              "type": "string",
               "const": "FilterList",
               "default": "FilterList"
             },
@@ -11942,11 +12715,6 @@
             },
             {
               "type": "string",
-              "const": "Instagram",
-              "default": "Instagram"
-            },
-            {
-              "type": "string",
               "const": "LayoutGrid1",
               "default": "LayoutGrid1"
             },
@@ -11969,11 +12737,6 @@
               "type": "string",
               "const": "Link",
               "default": "Link"
-            },
-            {
-              "type": "string",
-              "const": "Linkedin",
-              "default": "Linkedin"
             },
             {
               "type": "string",
@@ -12132,16 +12895,6 @@
             },
             {
               "type": "string",
-              "const": "Tiktok",
-              "default": "Tiktok"
-            },
-            {
-              "type": "string",
-              "const": "TikTok",
-              "default": "TikTok"
-            },
-            {
-              "type": "string",
               "const": "Trash",
               "default": "Trash"
             },
@@ -12149,11 +12902,6 @@
               "type": "string",
               "const": "Truck",
               "default": "Truck"
-            },
-            {
-              "type": "string",
-              "const": "Twitter",
-              "default": "Twitter"
             },
             {
               "type": "string",
@@ -12172,18 +12920,8 @@
             },
             {
               "type": "string",
-              "const": "WhatsApp",
-              "default": "WhatsApp"
-            },
-            {
-              "type": "string",
               "const": "XMark",
               "default": "XMark"
-            },
-            {
-              "type": "string",
-              "const": "Youtube",
-              "default": "Youtube"
             },
             {
               "type": "string",
@@ -12234,11 +12972,6 @@
       },
       "required": [],
       "title": "deco-sites/xpto/sections/Links/Shortcuts.tsx@Props"
-    },
-    "bW91cmFkYW5pZWwvc3RkL2NvbXBvbmVudHMvdHlwZXMudHM=@HTML": {
-      "type": "string",
-      "format": "html",
-      "title": "HTML"
     },
     "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL01pc2NlbGxhbmVvdXMvQ2FtcGFpZ25UaW1lci50c3g=@Props": {
       "type": "object",
@@ -16139,6 +16872,132 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQWNjb3JkaW9uc0NvbnRlbnQudHN4": {
+      "title": "deco-sites/xpto/sections/Institutional/AccordionsContent.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9BY2NvcmRpb25zQ29udGVudC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/sections/Institutional/AccordionsContent.tsx"
+          ],
+          "default": "deco-sites/xpto/sections/Institutional/AccordionsContent.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQXNpZGVNZW51LnRzeA==": {
+      "title": "deco-sites/xpto/sections/Institutional/AsideMenu.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9Bc2lkZU1lbnUudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/sections/Institutional/AsideMenu.tsx"
+          ],
+          "default": "deco-sites/xpto/sections/Institutional/AsideMenu.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQ2FyZHNDb250ZW50LnRzeA==": {
+      "title": "deco-sites/xpto/sections/Institutional/CardsContent.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9DYXJkc0NvbnRlbnQudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/sections/Institutional/CardsContent.tsx"
+          ],
+          "default": "deco-sites/xpto/sections/Institutional/CardsContent.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQ29udGFjdEZvcm0udHN4": {
+      "title": "deco-sites/xpto/sections/Institutional/ContactForm.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9Db250YWN0Rm9ybS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/sections/Institutional/ContactForm.tsx"
+          ],
+          "default": "deco-sites/xpto/sections/Institutional/ContactForm.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvSW5zdGl0dXRpb25hbFBhZ2UudHN4": {
+      "title": "deco-sites/xpto/sections/Institutional/InstitutionalPage.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9JbnN0aXR1dGlvbmFsUGFnZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/sections/Institutional/InstitutionalPage.tsx"
+          ],
+          "default": "deco-sites/xpto/sections/Institutional/InstitutionalPage.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvVGV4dENvbnRlbnQudHN4": {
+      "title": "deco-sites/xpto/sections/Institutional/TextContent.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvaW5zdGl0dXRpb25hbC9UZXh0Q29udGVudC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/sections/Institutional/TextContent.tsx"
+          ],
+          "default": "deco-sites/xpto/sections/Institutional/TextContent.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0xpbmtzL0xpbmtUcmVlLnRzeA==": {
       "title": "deco-sites/xpto/sections/Links/LinkTree.tsx",
       "type": "object",
@@ -17470,6 +18329,24 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0ltYWdlcy9TaG9wcGFibGVCYW5uZXIudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQWNjb3JkaW9uc0NvbnRlbnQudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQXNpZGVNZW51LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQ2FyZHNDb250ZW50LnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvQ29udGFjdEZvcm0udHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvSW5zdGl0dXRpb25hbFBhZ2UudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0luc3RpdHV0aW9uYWwvVGV4dENvbnRlbnQudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3NlY3Rpb25zL0xpbmtzL0xpbmtUcmVlLnRzeA=="

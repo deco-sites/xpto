@@ -1,6 +1,29 @@
 import { asset } from "$fresh/runtime.ts";
 import type { JSX } from "preact";
 
+export type PaymentIcons =
+  | "Visa"
+  | "Elo"
+  | "Mastercard"
+  | "Visa"
+  | "Pix"
+  | "AmericanExpress"
+  | "Boleto";
+
+export type SocialIcons =
+  | "Twitter"
+  | "Linkedin"
+  | "Pinterest"
+  | "Youtube"
+  | "Tiktok"
+  | "WhatsApp"
+  | "Instagram"
+  | "Facebook"
+  | "YouTubeOutline"
+  | "WhatsAppOutline"
+  | "InstagramOutline"
+  | "FacebookOutline";
+
 export type AvailableIcons =
   | "Apple"
   | "ArrowsPointingOut"
@@ -24,9 +47,9 @@ export type AvailableIcons =
   | "Discount"
   | "Edit"
   | "Elo"
+  | "Email"
   | "Equal"
   | "Eye"
-  | "Facebook"
   | "FilterList"
   | "Flame"
   | "Gift"
@@ -36,13 +59,11 @@ export type AvailableIcons =
   | "Headset"
   | "Heart"
   | "Heart2"
-  | "Instagram"
   | "LayoutGrid1"
   | "LayoutGrid2"
   | "LayoutGrid3"
   | "LayoutGrid4"
   | "Link"
-  | "Linkedin"
   | "List"
   | "Logo"
   | "Magento"
@@ -74,17 +95,12 @@ export type AvailableIcons =
   | "Tag"
   | "ThumbDown"
   | "ThumbUp"
-  | "Tiktok"
-  | "TikTok"
   | "Trash"
   | "Truck"
-  | "Twitter"
   | "User"
   | "Visa"
   | "VTEX"
-  | "WhatsApp"
   | "XMark"
-  | "Youtube"
   | "Zoom";
 
 export const IconsAvaliable = {
@@ -161,7 +177,6 @@ export const IconsAvaliable = {
   ThumbDown: "ThumbDown",
   ThumbUp: "ThumbUp",
   Tiktok: "Tiktok",
-  TikTok: "TikTok",
   Trash: "Trash",
   Truck: "Truck",
   Twitter: "Twitter",
@@ -172,6 +187,11 @@ export const IconsAvaliable = {
   XMark: "XMark",
   YouTube: "Youtube",
   Zoom: "Zoom",
+  YouTubeOutline: "YouTubeOutline",
+  WhatsAppOutline: "WhatsAppOutline",
+  InstagramOutline: "InstagramOutline",
+  FacebookOutline: "FacebookOutline",
+  Email: "Email",
 } as const;
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {
@@ -180,7 +200,7 @@ interface Props extends JSX.SVGAttributes<SVGSVGElement> {
    *
    * Example: <Icon id="Bell" />
    */
-  id: AvailableIcons;
+  id: AvailableIcons | SocialIcons | PaymentIcons;
   size?: number;
 }
 

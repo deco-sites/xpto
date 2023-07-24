@@ -1,10 +1,13 @@
 import Icon, {
   AvailableIcons,
   IconsAvaliable,
+  SocialIcons,
 } from "$store/components/ui/Icon.tsx";
 
 function Icons() {
-  const iconsList: AvailableIcons[] = Object.values(IconsAvaliable);
+  type IconList = AvailableIcons | SocialIcons;
+
+  const iconsList: IconList[] = Object.values(IconsAvaliable).sort();
 
   return (
     <div className="grid p-10 w-full grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-10 p-4 sm:p-6 md:p-8 lg:p-40rem bg-gray-100 rounded-lg">
