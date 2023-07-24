@@ -47,7 +47,6 @@ export type AvailableIcons =
   | "Discount"
   | "Edit"
   | "Elo"
-  | "Email"
   | "Equal"
   | "Eye"
   | "FilterList"
@@ -191,7 +190,6 @@ export const IconsAvaliable = {
   WhatsAppOutline: "WhatsAppOutline",
   InstagramOutline: "InstagramOutline",
   FacebookOutline: "FacebookOutline",
-  Email: "Email",
 } as const;
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

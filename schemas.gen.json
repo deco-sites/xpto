@@ -8825,11 +8825,6 @@
                   },
                   {
                     "type": "string",
-                    "const": "Email",
-                    "default": "Email"
-                  },
-                  {
-                    "type": "string",
                     "const": "Equal",
                     "default": "Equal"
                   },
@@ -11826,11 +11821,6 @@
                           },
                           {
                             "type": "string",
-                            "const": "Email",
-                            "default": "Email"
-                          },
-                          {
-                            "type": "string",
                             "const": "Equal",
                             "default": "Equal"
                           },
@@ -12367,11 +12357,6 @@
                               "type": "string",
                               "const": "Elo",
                               "default": "Elo"
-                            },
-                            {
-                              "type": "string",
-                              "const": "Email",
-                              "default": "Email"
                             },
                             {
                               "type": "string",
@@ -13195,11 +13180,6 @@
               "type": "string",
               "const": "Elo",
               "default": "Elo"
-            },
-            {
-              "type": "string",
-              "const": "Email",
-              "default": "Email"
             },
             {
               "type": "string",
