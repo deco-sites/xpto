@@ -5018,15 +5018,15 @@
       "type": "object",
       "properties": {
         "query": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "overides the query term",
           "title": "Query"
         },
         "count": {
-          "type": [
-            "number",
-            "null"
-          ],
+          "type": "number",
           "title": "Items per page",
           "description": "number of products per page to display"
         },
@@ -5084,7 +5084,8 @@
             }
           ],
           "type": "string",
-          "title": "Sorting"
+          "title": "Sorting",
+          "default": "relevance"
         },
         "selectedFacets": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3MvbGlueEltcHVsc2UvdHlwZXMudHM=@SelectedFacet[]",
@@ -5109,7 +5110,7 @@
         }
       },
       "required": [
-        "query"
+        "count"
       ],
       "title": "deco-sites/std/packs/linxImpulse/loaders/search.ts@Props"
     },
