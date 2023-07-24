@@ -89,7 +89,7 @@ function ContactForm({
                   <span>{serviceInfo.phone}</span>
                 </div>
                 <div class="flex">
-                  <Icon id="Email" class="w-5 h-5 mr-[10px]" />
+                  <Icon id="Mail" class="w-5 h-5 mr-[10px]" />
                   <span>{serviceInfo.email}</span>
                 </div>
                 <div class="text-base-300 font-normal">
