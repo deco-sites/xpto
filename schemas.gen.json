@@ -21,6 +21,7 @@
               "deco-sites/std/functions/butterCMSPostDetail.ts",
               "deco-sites/std/functions/butterCMSPosts.ts",
               "deco-sites/std/functions/butterCMSRelatedPosts.ts",
+              "deco-sites/std/functions/extractIdFromParam.ts",
               "deco-sites/std/functions/occProductDetailsPage.ts",
               "deco-sites/std/functions/requestToParam.ts",
               "deco-sites/std/functions/shopifyProductDetailsPage.ts",
@@ -756,6 +757,54 @@
         "pageSize"
       ],
       "title": "deco-sites/std/functions/butterCMSRelatedPosts.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@ExtractIDFromParam": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "string",
+          "title": "deco-sites/std/functions/extractIdFromParam.ts@ExtractIDFromParam"
+        },
+        {
+          "title": "Extract ID from request parameters",
+          "description": "Set param to slug for routes of type /:slug",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/functions/extractIdFromParam.ts"
+              ],
+              "default": "deco-sites/std/functions/extractIdFromParam.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "param": {
+          "type": "string",
+          "default": "slug",
+          "description": "Param name to extract from the Request URL",
+          "title": "Param"
+        }
+      },
+      "required": [
+        "param"
+      ],
+      "title": "deco-sites/std/functions/extractIdFromParam.ts@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Thing": {
       "title": "Thing"
@@ -4940,30 +4989,9 @@
     "ZGVjby1zaXRlcy9zdGQvcGFja3MvbGlueEltcHVsc2UvbG9hZGVycy9wcm9kdWN0cy9zaW1pbGFySXRlbXMudHM=@Props": {
       "type": "object",
       "properties": {
-        "slug": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
-          "title": "Slug"
-        },
-        "position": {
-          "anyOf": [
-            {
-              "type": "string",
-              "const": "top",
-              "default": "top"
-            },
-            {
-              "type": "string",
-              "const": "middle",
-              "default": "middle"
-            },
-            {
-              "type": "string",
-              "const": "bottom",
-              "default": "bottom"
-            }
-          ],
-          "type": "string",
-          "title": "Position"
+        "id": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@ExtractIDFromParam",
+          "title": "Id"
         },
         "feature": {
           "anyOf": [
@@ -4983,8 +5011,7 @@
         }
       },
       "required": [
-        "slug",
-        "position",
+        "id",
         "feature"
       ],
       "title": "deco-sites/std/packs/linxImpulse/loaders/products/similarItems.ts@Props"
@@ -17731,6 +17758,28 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==": {
+      "title": "Extract ID from request parameters",
+      "description": "Set param to slug for routes of type /:slug",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/functions/extractIdFromParam.ts"
+          ],
+          "default": "deco-sites/std/functions/extractIdFromParam.ts"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL29jY1Byb2R1Y3REZXRhaWxzUGFnZS50cw==": {
       "title": "Oracle Commerce Cloud Product Page Loader",
       "description": "Works on routes of type /:slug/p",
@@ -21127,6 +21176,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL29jY1Byb2R1Y3REZXRhaWxzUGFnZS50cw=="
