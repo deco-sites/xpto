@@ -21,8 +21,8 @@
               "deco-sites/std/functions/butterCMSPostDetail.ts",
               "deco-sites/std/functions/butterCMSPosts.ts",
               "deco-sites/std/functions/butterCMSRelatedPosts.ts",
-              "deco-sites/std/functions/extractIdFromParam.ts",
               "deco-sites/std/functions/occProductDetailsPage.ts",
+              "deco-sites/std/functions/productIdFromVTEXSlug.ts",
               "deco-sites/std/functions/requestToParam.ts",
               "deco-sites/std/functions/shopifyProductDetailsPage.ts",
               "deco-sites/std/functions/shopifyProductList.ts",
@@ -61,6 +61,9 @@
               "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts",
               "deco-sites/std/loaders/nuvemShop/nuvemShopProductListingPage.ts",
               "deco-sites/std/loaders/vnda/cart.ts",
+              "deco-sites/std/loaders/vnda/productDetailsPage.ts",
+              "deco-sites/std/loaders/vnda/productList.ts",
+              "deco-sites/std/loaders/vnda/productListingPage.ts",
               "deco-sites/std/loaders/vnda/proxy.ts",
               "deco-sites/std/loaders/vtex/cart.ts",
               "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts",
@@ -757,54 +760,6 @@
         "pageSize"
       ],
       "title": "deco-sites/std/functions/butterCMSRelatedPosts.ts@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@ExtractIDFromParam": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/Resolvable"
-        },
-        {
-          "type": "string",
-          "title": "deco-sites/std/functions/extractIdFromParam.ts@ExtractIDFromParam"
-        },
-        {
-          "title": "Extract ID from request parameters",
-          "description": "Set param to slug for routes of type /:slug",
-          "type": "object",
-          "allOf": [
-            {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@Props"
-            }
-          ],
-          "required": [
-            "__resolveType"
-          ],
-          "properties": {
-            "__resolveType": {
-              "type": "string",
-              "enum": [
-                "deco-sites/std/functions/extractIdFromParam.ts"
-              ],
-              "default": "deco-sites/std/functions/extractIdFromParam.ts"
-            }
-          }
-        }
-      ]
-    },
-    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@Props": {
-      "type": "object",
-      "properties": {
-        "param": {
-          "type": "string",
-          "default": "slug",
-          "description": "Param name to extract from the Request URL",
-          "title": "Param"
-        }
-      },
-      "required": [
-        "param"
-      ],
-      "title": "deco-sites/std/functions/extractIdFromParam.ts@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Thing": {
       "title": "Thing"
@@ -1805,8 +1760,7 @@
           }
         },
         {
-          "title": "VTEX Product Page Loader",
-          "description": "Works on routes of type /:slug/p",
+          "title": "deco-sites/std/functions/vndaProductDetailsPage.ts",
           "type": "object",
           "required": [
             "__resolveType"
@@ -1879,6 +1833,23 @@
           }
         },
         {
+          "title": "VNDA Product Page Loader",
+          "description": "Works on routes of type /produto/:slug",
+          "type": "object",
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/loaders/vnda/productDetailsPage.ts"
+              ],
+              "default": "deco-sites/std/loaders/vnda/productDetailsPage.ts"
+            }
+          }
+        },
+        {
           "title": "VTEX Intelligent Search - Product Details Page",
           "description": "Works on routes of type /:slug/p",
           "type": "object",
@@ -1924,6 +1895,39 @@
         }
       ]
     },
+    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw==@ProductID": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "string",
+          "title": "deco-sites/std/functions/productIdFromVTEXSlug.ts@ProductID"
+        },
+        {
+          "title": "Extract ID from request parameters",
+          "description": "Set param to slug for routes of type /:slug",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/functions/productIdFromVTEXSlug.ts"
+              ],
+              "default": "deco-sites/std/functions/productIdFromVTEXSlug.ts"
+            }
+          }
+        }
+      ]
+    },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam": {
       "anyOf": [
         {
@@ -1931,7 +1935,7 @@
         },
         {
           "type": "string",
-          "title": "deco-sites/std/functions/requestToParam.ts@RequestURLParam"
+          "title": "RequestURLParam"
         },
         {
           "title": "Get params from request parameters",
@@ -1956,6 +1960,21 @@
           }
         }
       ]
+    },
+    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
+          "default": "slug",
+          "description": "Param name to extract from the Request URL",
+          "title": "Slug"
+        }
+      },
+      "required": [
+        "slug"
+      ],
+      "title": "deco-sites/std/functions/productIdFromVTEXSlug.ts@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@Props": {
       "type": "object",
@@ -2013,12 +2032,11 @@
           }
         },
         {
-          "title": "VNDA - Search Products",
-          "description": "Use it in Shelves and static Galleries.",
+          "title": "deco-sites/std/functions/vndaProductList.ts",
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==@Props"
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0LnRz@Props"
             }
           ],
           "required": [
@@ -2165,6 +2183,28 @@
                 "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts"
               ],
               "default": "deco-sites/std/loaders/nuvemShop/nuvemShopProductList.ts"
+            }
+          }
+        },
+        {
+          "title": "VNDA - Search Products",
+          "description": "Use it in Shelves and static Galleries.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0LnRz@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/loaders/vnda/productList.ts"
+              ],
+              "default": "deco-sites/std/loaders/vnda/productList.ts"
             }
           }
         },
@@ -2563,12 +2603,11 @@
           }
         },
         {
-          "title": "VNDA - Product Listing page",
-          "description": "Useful for category, search, brand and collection pages.",
+          "title": "deco-sites/std/functions/vndaProductListingPage.ts",
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=@Props"
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==@Props"
             }
           ],
           "required": [
@@ -2698,6 +2737,28 @@
           }
         },
         {
+          "title": "VNDA - Product Listing page",
+          "description": "Useful for category, search, brand and collection pages.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/loaders/vnda/productListingPage.ts"
+              ],
+              "default": "deco-sites/std/loaders/vnda/productListingPage.ts"
+            }
+          }
+        },
+        {
           "title": "VTEX Intelligent Search - Product Listing page",
           "description": "Returns data ready for search pages like category,brand pages",
           "type": "object",
@@ -2765,13 +2826,13 @@
       ],
       "title": "deco-sites/std/functions/shopifyProductListingPage.ts@Props"
     },
-    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==@Props": {
+    "ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0LnRz@Props": {
       "type": "object",
       "properties": {
-        "limit": {
+        "count": {
           "type": "number",
           "description": "total number of items to display",
-          "title": "Limit"
+          "title": "Count"
         },
         "term": {
           "type": [
@@ -2829,11 +2890,11 @@
         }
       },
       "required": [
-        "limit"
+        "count"
       ],
-      "title": "deco-sites/std/functions/vndaProductList.ts@Props"
+      "title": "deco-sites/std/packs/vnda/loaders/productList.ts@Props"
     },
-    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=@Props": {
+    "ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==@Props": {
       "type": "object",
       "properties": {
         "term": {
@@ -2859,12 +2920,16 @@
           "type": "number",
           "title": "Items per page",
           "description": "number of products per page to display"
+        },
+        "slug": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
+          "title": "Slug"
         }
       },
       "required": [
         "count"
       ],
-      "title": "deco-sites/std/functions/vndaProductListingPage.ts@Props"
+      "title": "deco-sites/std/packs/vnda/loaders/productListingPage.ts@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdC50cw==@Props": {
       "type": "object",
@@ -4990,7 +5055,7 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@ExtractIDFromParam",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw==@ProductID",
           "title": "Id"
         },
         "feature": {
@@ -6457,6 +6522,41 @@
       ],
       "title": "Shipping"
     },
+    "ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS90eXBlcy50cw==@Coupon": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "title": "Code"
+        },
+        "discount": {
+          "type": "number",
+          "title": "Discount"
+        },
+        "rebate_token": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Rebate_token"
+        },
+        "rebate_discount": {
+          "type": "number",
+          "title": "Rebate_discount"
+        }
+      },
+      "required": [
+        "code",
+        "discount",
+        "rebate_token",
+        "rebate_discount"
+      ],
+      "title": "Coupon"
+    },
     "ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS90eXBlcy50cw==@Cart": {
       "anyOf": [
         {
@@ -6478,52 +6578,7 @@
               "title": "Shipping"
             },
             "coupon": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string",
-                      "title": "Code"
-                    },
-                    "discount": {
-                      "type": "number",
-                      "title": "Discount"
-                    },
-                    "rebate_token": {
-                      "anyOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ],
-                      "title": "Rebate_token"
-                    },
-                    "rebate_discount": {
-                      "type": "number",
-                      "title": "Rebate_discount"
-                    }
-                  },
-                  "required": [
-                    "code",
-                    "discount",
-                    "rebate_token",
-                    "rebate_discount"
-                  ]
-                },
-                {
-                  "type": "string",
-                  "const": "Error",
-                  "default": "Error"
-                },
-                {
-                  "type": "string",
-                  "const": "Removed",
-                  "default": "Removed"
-                }
-              ],
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS90eXBlcy50cw==@Coupon",
               "title": "Coupon"
             }
           },
@@ -17758,28 +17813,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==": {
-      "title": "Extract ID from request parameters",
-      "description": "Set param to slug for routes of type /:slug",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/std/functions/extractIdFromParam.ts"
-          ],
-          "default": "deco-sites/std/functions/extractIdFromParam.ts"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL29jY1Byb2R1Y3REZXRhaWxzUGFnZS50cw==": {
       "title": "Oracle Commerce Cloud Product Page Loader",
       "description": "Works on routes of type /:slug/p",
@@ -17794,6 +17827,28 @@
             "deco-sites/std/functions/occProductDetailsPage.ts"
           ],
           "default": "deco-sites/std/functions/occProductDetailsPage.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw==": {
+      "title": "Extract ID from request parameters",
+      "description": "Set param to slug for routes of type /:slug",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/functions/productIdFromVTEXSlug.ts"
+          ],
+          "default": "deco-sites/std/functions/productIdFromVTEXSlug.ts"
         }
       }
     },
@@ -17881,8 +17936,7 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0RGV0YWlsc1BhZ2UudHM=": {
-      "title": "VTEX Product Page Loader",
-      "description": "Works on routes of type /:slug/p",
+      "title": "deco-sites/std/functions/vndaProductDetailsPage.ts",
       "type": "object",
       "required": [
         "__resolveType"
@@ -17898,12 +17952,11 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==": {
-      "title": "VNDA - Search Products",
-      "description": "Use it in Shelves and static Galleries.",
+      "title": "deco-sites/std/functions/vndaProductList.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdC50cw==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0LnRz@Props"
         }
       ],
       "required": [
@@ -17920,12 +17973,11 @@
       }
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=": {
-      "title": "VNDA - Product Listing page",
-      "description": "Useful for category, search, brand and collection pages.",
+      "title": "deco-sites/std/functions/vndaProductListingPage.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3ZuZGFQcm9kdWN0TGlzdGluZ1BhZ2UudHM=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==@Props"
         }
       ],
       "required": [
@@ -18599,6 +18651,67 @@
             "deco-sites/std/loaders/vnda/cart.ts"
           ],
           "default": "deco-sites/std/loaders/vnda/cart.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb2R1Y3REZXRhaWxzUGFnZS50cw==": {
+      "title": "VNDA Product Page Loader",
+      "description": "Works on routes of type /produto/:slug",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/loaders/vnda/productDetailsPage.ts"
+          ],
+          "default": "deco-sites/std/loaders/vnda/productDetailsPage.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb2R1Y3RMaXN0LnRz": {
+      "title": "VNDA - Search Products",
+      "description": "Use it in Shelves and static Galleries.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0LnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/loaders/vnda/productList.ts"
+          ],
+          "default": "deco-sites/std/loaders/vnda/productList.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==": {
+      "title": "VNDA - Product Listing page",
+      "description": "Useful for category, search, brand and collection pages.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvcGFja3Mvdm5kYS9sb2FkZXJzL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/loaders/vnda/productListingPage.ts"
+          ],
+          "default": "deco-sites/std/loaders/vnda/productListingPage.ts"
         }
       }
     },
@@ -21178,10 +21291,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2V4dHJhY3RJZEZyb21QYXJhbS50cw=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL29jY1Byb2R1Y3REZXRhaWxzUGFnZS50cw=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL29jY1Byb2R1Y3REZXRhaWxzUGFnZS50cw=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Byb2R1Y3RJZEZyb21WVEVYU2x1Zy50cw=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz"
@@ -21312,6 +21425,15 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL2NhcnQudHM="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb2R1Y3REZXRhaWxzUGFnZS50cw=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb2R1Y3RMaXN0LnRz"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb2R1Y3RMaXN0aW5nUGFnZS50cw=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92bmRhL3Byb3h5LnRz"
