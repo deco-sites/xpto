@@ -75,6 +75,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "deco-sites/std/loaders/x/redirectsFromCsv.ts",
+              "deco-sites/xpto/loaders/xptoProductDetailsPage.ts",
               "./islands/AddToCartButton.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderModals.tsx",
@@ -9901,6 +9902,80 @@
       ],
       "title": "deco-sites/std/loaders/x/redirectsFromCsv.ts@Redirects"
     },
+    "ZGVjby1zaXRlcy94cHRvL2NvbW1lcmNlL3NhbGVzZm9yY2UvdHlwZXMudHM=@ProductBaseSalesforce": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number",
+          "title": "Limit"
+        },
+        "data": {
+          "title": "Data"
+        },
+        "total": {
+          "type": "number",
+          "title": "Total"
+        },
+        "url": {
+          "type": "string",
+          "title": "Url"
+        }
+      },
+      "required": [
+        "limit",
+        "data",
+        "total",
+        "url"
+      ],
+      "title": "ProductBaseSalesforce"
+    },
+    "ZGVjby1zaXRlcy94cHRvL2NvbW1lcmNlL3NhbGVzZm9yY2UvdHlwZXMudHM=@ProductBaseSalesforce|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2NvbW1lcmNlL3NhbGVzZm9yY2UvdHlwZXMudHM=@ProductBaseSalesforce"
+        },
+        {
+          "title": "deco-sites/xpto/loaders/xptoProductDetailsPage.ts",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2xvYWRlcnMveHB0b1Byb2R1Y3REZXRhaWxzUGFnZS50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/xpto/loaders/xptoProductDetailsPage.ts"
+              ],
+              "default": "deco-sites/xpto/loaders/xptoProductDetailsPage.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1zaXRlcy94cHRvL2xvYWRlcnMveHB0b1Byb2R1Y3REZXRhaWxzUGFnZS50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "productCode": {
+          "type": "string",
+          "title": "Product Code"
+        }
+      },
+      "required": [
+        "productCode"
+      ],
+      "title": "deco-sites/xpto/loaders/xptoProductDetailsPage.ts@Props"
+    },
     "ZGVjby1zaXRlcy94cHRvL2NvbXBvbmVudHMvZm9vdGVyL05ld3NsZXR0ZXIudHN4@Form": {
       "type": "object",
       "properties": {
@@ -18866,6 +18941,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy94cHRvL2xvYWRlcnMveHB0b1Byb2R1Y3REZXRhaWxzUGFnZS50cw==": {
+      "title": "deco-sites/xpto/loaders/xptoProductDetailsPage.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2xvYWRlcnMveHB0b1Byb2R1Y3REZXRhaWxzUGFnZS50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/xpto/loaders/xptoProductDetailsPage.ts"
+          ],
+          "default": "deco-sites/xpto/loaders/xptoProductDetailsPage.ts"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0FkZFRvQ2FydEJ1dHRvbi50c3g=": {
       "title": "./islands/AddToCartButton.tsx",
       "type": "object",
@@ -21092,6 +21188,23 @@
           "default": "deco-sites/std/actions/vtex/wishlist/removeItem.ts"
         }
       }
+    },
+    "ZGVjby1zaXRlcy94cHRvL3JvdXRlcy9fbWlkZGxld2FyZS50c3g=@MiddlewareConfig": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "title": "State",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/Resolvable"
+          },
+          "description": "Configure your loaders global state."
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "deco-sites/xpto/routes/_middleware.tsx@MiddlewareConfig"
     }
   },
   "root": {
@@ -21305,6 +21418,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy94L3JlZGlyZWN0c0Zyb21Dc3YudHM="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL2xvYWRlcnMveHB0b1Byb2R1Y3REZXRhaWxzUGFnZS50cw=="
         }
       ]
     },
@@ -21703,6 +21819,7 @@
       "type": "object",
       "required": [
         "./routes/_middleware.ts",
+        "./routes/_middleware.tsx",
         "./routes/[...catchall].tsx",
         "./routes/index.tsx",
         "./routes/live/previews/index.tsx"
@@ -21712,6 +21829,13 @@
           "anyOf": [
             {
               "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9fbWlkZGxld2FyZS50cw==@MiddlewareConfig"
+            }
+          ]
+        },
+        "./routes/_middleware.tsx": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy94cHRvL3JvdXRlcy9fbWlkZGxld2FyZS50c3g=@MiddlewareConfig"
             }
           ]
         },
