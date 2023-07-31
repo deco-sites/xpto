@@ -14,6 +14,7 @@ import { SendEventOnLoad } from "$store/sdk/analytics.tsx";
 import { mapProductToAnalyticsItem } from "deco-sites/std/commerce/utils/productToAnalyticsItem.ts";
 import type { ProductDetailsPage } from "deco-sites/std/commerce/types.ts";
 import type { LoaderReturnType } from "$live/types.ts";
+import ImageZoomJS from "$store/components/product/ImageZoomJS.tsx";
 
 import ProductSelector from "./ProductVariantSelector.tsx";
 import ProductImageZoom from "$store/islands/ProductImageZoom.tsx";
@@ -237,6 +238,11 @@ function Details({
   const id = `product-image-gallery:${useId()}`;
   const images = useStableImages(product);
 
+  const sliderId = "pdp-image-slider";
+  const imageContainerClass = "pdp-image-container";
+  const normalImageClass = "zoom-image-normal";
+  const zoomedImageClass = "zoom-image-large";
+
   /**
    * Product slider variant
    *
@@ -322,6 +328,12 @@ function Details({
           </div>
         </div>
         <SliderJS rootId={id}></SliderJS>
+        <ImageZoomJS
+          sliderId={sliderId}
+          imageContainerClass={imageContainerClass}
+          normalImageClass={normalImageClass}
+          zoomedImageClass={zoomedImageClass}
+        />
       </>
     );
   }

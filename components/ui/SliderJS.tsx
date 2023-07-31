@@ -54,6 +54,8 @@ const setup = (
   const slider = root?.querySelector<HTMLUListElement>(
     `[${ATTRIBUTES["data-slider"]}]`,
   );
+
+  console.log('lider', slider)
   const items = root?.querySelectorAll<HTMLLIElement>(
     `[${ATTRIBUTES["data-slider-item"]}]`,
   );
