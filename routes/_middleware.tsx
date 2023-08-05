@@ -1,7 +1,6 @@
 import { MiddlewareHandlerContext } from "$fresh/server.ts";
 import { Resolvable } from "$live/engine/core/resolver.ts";
 import { LiveConfig, LiveState } from "$live/types.ts";
-import type { Account } from "deco-sites/std/packs/salesforce/accounts/salesforce.ts";
 import { getCookies } from "std/http/mod.ts";
 import { paths } from "deco-sites/std/packs/salesforce/utils/paths.ts";
 import { TokenBaseSalesforce } from "deco-sites/std/packs/salesforce/types.ts";
@@ -24,6 +23,17 @@ export interface AuthAPIProps {
   config: Account;
   grantType: "client_credentials" | "refresh_token";
   refreshToken?: string;
+}
+
+export interface Account {
+  siteId: string;
+  organizationId: string;
+  shortCode: string;
+  clientId: string;
+  clientSecret: string;
+  publicStoreUrl: string;
+  currency: string;
+  locale: string;
 }
 
 const authApi = async (props: AuthAPIProps): Promise<TokenBaseSalesforce> => {
@@ -97,8 +107,18 @@ export const handler = async (
   ctx: MiddlewareHandlerContext<LiveConfig<MiddlewareConfig, LiveState>>,
 ) => {
   const res = await ctx.next();
-  const global = ctx.state?.global as GlobalMiddleware;
-  const config = global?.configSalesforce;
+  const config: Account = {
+    siteId: "RefArch",
+    organizationId: "f_ecom_zzte_053",
+    shortCode: "kv7kzm78",
+    clientId: "da422690-7800-41d1-8ee4-3ce983961078",
+    clientSecret: "D*HHUrgO2%qADp2JTIUi",
+    publicStoreUrl:
+      "https://zzte-053.dx.commercecloud.salesforce.com/s/RefArch",
+
+    currency: "USD",
+    locale: "en-US",
+  };
   const cookies = getCookies(req.headers);
   const siteId = String(config?.siteId);
 

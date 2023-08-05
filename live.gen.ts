@@ -48,6 +48,7 @@ import * as $$$$$$$$28 from "./sections/Product/SearchResult.tsx";
 import * as $$$$$$$$29 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$$$30 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$$$31 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$$$$$$$$0 from "./apps/salesforce-integration.ts";
 import { DecoManifest } from "$live/types.ts";
 import * as $live_workflows from "$live/routes/live/workflows/run.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
@@ -280,6 +281,9 @@ const manifest = {
     "deco-sites/xpto/sections/Product/Wishlist.tsx": $$$$$$$$29,
     "deco-sites/xpto/sections/Social/InstagramPosts.tsx": $$$$$$$$30,
     "deco-sites/xpto/sections/Social/WhatsApp.tsx": $$$$$$$$31,
+  },
+  "apps": {
+    "deco-sites/xpto/apps/salesforce-integration.ts": $$$$$$$$$$$$$0,
   },
   "loaders": {
     "$live/loaders/manifest.ts": i2$$$0,
