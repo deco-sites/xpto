@@ -20,17 +20,21 @@ export interface GlobalMiddleware {
   [key: string]: unknown;
 }
 
-export const authApi = async (
-  config: Account,
-  grant_type: "client_credentials" | "refresh_token",
-  refresh_token?: string,
-): Promise<TokenBaseSalesforce | null> => {
-  const body = new URLSearchParams({ grant_type });
+export interface AuthAPIProps {
+  config: Account;
+  grantType: "client_credentials" | "refresh_token";
+  refreshToken?: string;
+}
 
-  if (grant_type == "refresh_token" && refresh_token) {
-    body.append("refresh_token", refresh_token);
+const authApi = async (props: AuthAPIProps): Promise<TokenBaseSalesforce> => {
+  const { config, grantType, refreshToken } = props;
+
+  const body = new URLSearchParams({ "grant_type": grantType });
+
+  if (grantType == "refresh_token" && refreshToken) {
+    body.append("refresh_token", refreshToken);
   }
-  const response: unknown = await fetchAPI(
+  const response: TokenBaseSalesforce = await fetchAPI(
     `${
       paths(config).shopper.auth.v1.organizations._organizationId.oauth2.token
     }`,
@@ -46,10 +50,46 @@ export const authApi = async (
     },
   );
 
-  if (!response) {
-    return null;
-  }
-  return response as TokenBaseSalesforce;
+  return response;
+};
+
+const setCookie = (
+  token: TokenBaseSalesforce,
+  res: Response,
+  siteId: string,
+) => {
+  const {
+    access_token,
+    expires_in,
+    refresh_token,
+    usid,
+    refresh_token_expires_in,
+    id_token,
+  } = token;
+
+  const expireTokenDate = convertSecondsToDate(expires_in)
+    .toUTCString();
+  const expireRefTokenDate = convertSecondsToDate(refresh_token_expires_in)
+    .toUTCString();
+
+  res.headers.set(
+    "Set-Cookie",
+    `token_${siteId}=${access_token}; Expires=${expireTokenDate}`,
+  );
+
+  res.headers.append(
+    "Set-Cookie",
+    `${
+      id_token ? "cc-nx" : "cc-nx-g"
+    }_${siteId}=${refresh_token}; Expires=${expireRefTokenDate}`,
+  );
+
+  res.headers.append("Set-Cookie", `usid_${siteId}=${usid}`);
+};
+
+const convertSecondsToDate = (seconds: number): Date => {
+  const actualDate = new Date();
+  return new Date(actualDate.getTime() + seconds * 1000);
 };
 
 export const handler = async (
@@ -58,39 +98,30 @@ export const handler = async (
 ) => {
   const res = await ctx.next();
   const global = ctx.state?.global as GlobalMiddleware;
-  const configSalesforce = global?.configSalesforce;
-
-  if (!configSalesforce) {
-    return res;
-  }
-
+  const config = global?.configSalesforce;
   const cookies = getCookies(req.headers);
-  const tokenExists = "token" in cookies;
+  const siteId = String(config?.siteId);
 
-  if (tokenExists) {
+  if (`token_${siteId}` in cookies || !config) {
     return res;
   }
 
-  const cc_nxExists = "cc-nx" in cookies;
-  const cc_nx_gExists = "cc-nx-g" in cookies;
-  let response: TokenBaseSalesforce | null = null;
+  const cc_nxCookie = cookies[`cc-nx_${siteId}`];
+  const cc_nx_gCookie = cookies[`cc-nx-g_${siteId}`];
 
-  if (cc_nxExists || cc_nx_gExists) {
-    const refreshToken = cc_nxExists ? cookies["cc-nx"] : cookies["cc-nx-g"];
-    response = await authApi(configSalesforce, "refresh_token", refreshToken);
-  } else {
-    response = await authApi(configSalesforce, "client_credentials");
-  }
+  if (cc_nxCookie || cc_nx_gCookie) {
+    const refreshToken = cc_nxCookie ?? cc_nx_gCookie;
 
-  if (!response) {
+    const token = await authApi({
+      config,
+      grantType: "refresh_token",
+      refreshToken,
+    });
+    setCookie(token, res, siteId);
     return res;
   }
-
-  res.headers.set("Set-Cookie", `token=${response.access_token}`);
-  res.headers.append(
-    "Set-Cookie",
-    `${response.id_token ? "cc-nx" : "cc-nx-g"}=${response.refresh_token}`,
-  );
+  const token = await authApi({ config, grantType: "client_credentials" });
+  setCookie(token, res, siteId);
 
   return res;
 };
