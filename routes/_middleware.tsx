@@ -84,17 +84,20 @@ const setCookie = (
 
   res.headers.set(
     "Set-Cookie",
-    `token_${siteId}=${access_token}; Expires=${expireTokenDate}`,
+    `token_${siteId}=${access_token}; Expires=${expireTokenDate}; Path=/; Secure; HttpOnly;`,
   );
 
   res.headers.append(
     "Set-Cookie",
     `${
       id_token ? "cc-nx" : "cc-nx-g"
-    }_${siteId}=${refresh_token}; Expires=${expireRefTokenDate}`,
+    }_${siteId}=${refresh_token}; Expires=${expireRefTokenDate}; Path=/; Secure; HttpOnly;`,
   );
 
-  res.headers.append("Set-Cookie", `usid_${siteId}=${usid}`);
+  res.headers.append(
+    "Set-Cookie",
+    `usid_${siteId}=${usid}; Path=/; Secure; HttpOnly;`,
+  );
 };
 
 const convertSecondsToDate = (seconds: number): Date => {
