@@ -118,6 +118,7 @@ export const handler = async (
     clientSecret: "D*HHUrgO2%qADp2JTIUi",
     publicStoreUrl:
       "https://zzte-053.dx.commercecloud.salesforce.com/s/RefArch",
+
     currency: "USD",
     locale: "en-US",
   };
