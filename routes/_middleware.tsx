@@ -2,8 +2,6 @@ import { MiddlewareHandlerContext } from "$fresh/server.ts";
 import { Resolvable } from "$live/engine/core/resolver.ts";
 import { LiveConfig, LiveState } from "$live/types.ts";
 import { getCookies } from "std/http/mod.ts";
-import { paths } from "deco-sites/std/packs/salesforce/utils/paths.ts";
-import { TokenBaseSalesforce } from "deco-sites/std/packs/salesforce/types.ts";
 import { encode } from "https://deno.land/std@0.195.0/encoding/base64.ts";
 import { fetchAPI } from "deco-sites/std/utils/fetch.ts";
 
@@ -36,6 +34,20 @@ export interface Account {
   locale: string;
 }
 
+export interface TokenBaseSalesforce {
+  access_token: string;
+  id_token: string;
+  refresh_token: string;
+  expires_in: number;
+  refresh_token_expires_in: number;
+  token_type: "BEARER";
+  usid: string;
+  customer_id: string;
+  enc_user_id: string;
+  idp_access_token: string;
+  idp_refresh_token: string;
+}
+
 const authApi = async (props: AuthAPIProps): Promise<TokenBaseSalesforce> => {
   const { config, grantType, refreshToken } = props;
 
@@ -45,9 +57,7 @@ const authApi = async (props: AuthAPIProps): Promise<TokenBaseSalesforce> => {
     body.append("refresh_token", refreshToken);
   }
   const response: TokenBaseSalesforce = await fetchAPI(
-    `${
-      paths(config).shopper.auth.v1.organizations._organizationId.oauth2.token
-    }`,
+    `${`https://${config.shortCode}.api.commercecloud.salesforce.com/shopper/auth/v1/organizations/${config.organizationId}/oauth2/token`}`,
     {
       method: "POST",
       body: body,
@@ -118,6 +128,7 @@ export const handler = async (
     clientSecret: "D*HHUrgO2%qADp2JTIUi",
     publicStoreUrl:
       "https://zzte-053.dx.commercecloud.salesforce.com/s/RefArch",
+
     currency: "USD",
     locale: "en-US",
   };
