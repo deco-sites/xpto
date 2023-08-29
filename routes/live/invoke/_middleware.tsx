@@ -23,6 +23,11 @@ export interface AuthAPIProps {
   refreshToken?: string;
 }
 
+export interface CreateCartAPIProps {
+  config: Account;
+  token: TokenBaseSalesforce;
+}
+
 export interface Account {
   siteId: string;
   organizationId: string;
@@ -56,7 +61,8 @@ const authApi = async (props: AuthAPIProps): Promise<TokenBaseSalesforce> => {
   if (grantType == "refresh_token" && refreshToken) {
     body.append("refresh_token", refreshToken);
   }
-  const response: TokenBaseSalesforce = await fetchAPI(
+
+  return await fetchAPI(
     `${`https://${config.shortCode}.api.commercecloud.salesforce.com/shopper/auth/v1/organizations/${config.organizationId}/oauth2/token`}`,
     {
       method: "POST",
@@ -69,14 +75,39 @@ const authApi = async (props: AuthAPIProps): Promise<TokenBaseSalesforce> => {
       },
     },
   );
+};
 
-  return response;
+const cartAPI = async (
+  props: CreateCartAPIProps,
+): Promise<string> => {
+  const { config, token } = props;
+  const result = await fetch(
+    `${`https://${config.shortCode}.api.commercecloud.salesforce.com/checkout/shopper-baskets/v1/organizations/${config.organizationId}/baskets?siteId=${config.siteId}`}`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        customerInfo: {
+          customerId: token.customer_id,
+          email: "",
+        },
+      }),
+      headers: {
+        "Authorization": `Bearer ${token.access_token}`,
+        "content-type": "application/json",
+      },
+    },
+  ).then((res) => {
+    return res.json();
+  });
+
+  return result.basketId ? result.basketId : result.basketIds;
 };
 
 const setCookie = (
   token: TokenBaseSalesforce,
   res: Response,
   siteId: string,
+  cartId: string,
 ) => {
   const {
     access_token,
@@ -107,6 +138,10 @@ const setCookie = (
   res.headers.append(
     "Set-Cookie",
     `usid_${siteId}=${usid}; Path=/; Secure; HttpOnly;`,
+  );
+  res.headers.append(
+    "Set-Cookie",
+    `cart_${siteId}=${cartId}; Expires=${expireTokenDate}; Path=/;  Secure; HttpOnly;`,
   );
 };
 
@@ -142,19 +177,14 @@ export const handler = async (
   const cc_nxCookie = cookies[`cc-nx_${siteId}`];
   const cc_nx_gCookie = cookies[`cc-nx-g_${siteId}`];
 
-  if (cc_nxCookie || cc_nx_gCookie) {
-    const refreshToken = cc_nxCookie ?? cc_nx_gCookie;
-
-    const token = await authApi({
-      config,
-      grantType: "refresh_token",
-      refreshToken,
-    });
-    setCookie(token, res, siteId);
-    return res;
-  }
-  const token = await authApi({ config, grantType: "client_credentials" });
-  setCookie(token, res, siteId);
-
+  const token = await authApi({
+    config,
+    grantType: cc_nxCookie || cc_nx_gCookie
+      ? "refresh_token"
+      : "client_credentials",
+    refreshToken: cc_nxCookie ?? cc_nx_gCookie ?? undefined,
+  });
+  const cartId = await cartAPI({ config, token });
+  setCookie(token, res, siteId, cartId);
   return res;
 };
