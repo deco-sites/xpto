@@ -1,23 +1,21 @@
 import { useSignal } from "@preact/signals";
 import { useCallback } from "preact/hooks";
-import { useCart } from "deco-sites/std/packs/vtex/hooks/useCart.ts";
+import { useCart } from "salesforce-integration/hooks/useCart.ts";
 import { useUI } from "deco-sites/fashion/sdk/useUI.ts";
 import { sendEvent } from "deco-sites/fashion/sdk/analytics.tsx";
 
 export interface Options {
-  skuId: string;
-  sellerId?: string;
+  productId: string;
   price: number;
   discount: number;
   /**
    * sku name
    */
   name: string;
-  productGroupId: string;
 }
 
 export const useAddToCart = (
-  { skuId, sellerId, price, discount, name, productGroupId }: Options,
+  { productId, price, discount, name }: Options,
 ) => {
   const isAddingToCart = useSignal(false);
   const { displayCart } = useUI();
@@ -27,26 +25,22 @@ export const useAddToCart = (
     e.preventDefault();
     e.stopPropagation();
 
-    if (!sellerId) {
-      return;
-    }
-
     try {
       isAddingToCart.value = true;
       await addItems({
-        orderItems: [{ id: skuId, seller: sellerId, quantity: 1 }],
+        orderItems: [{ productId, quantity: 1 }],
       });
 
       sendEvent({
         name: "add_to_cart",
         params: {
           items: [{
-            item_id: productGroupId,
+            item_id: productId,
             quantity: 1,
             price,
             discount,
             item_name: name,
-            item_variant: skuId,
+            item_variant: productId,
           }],
         },
       });
@@ -55,7 +49,7 @@ export const useAddToCart = (
     } finally {
       isAddingToCart.value = false;
     }
-  }, [skuId, sellerId]);
+  }, [productId]);
 
   return { onClick, loading: isAddingToCart.value };
 };

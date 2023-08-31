@@ -4,23 +4,14 @@ import {
   useAddToCart,
 } from "$store/sdk/useAddToCart.ts";
 
-interface Props extends UseAddToCartProps {
-  /**
-   * @description Product id
-   */
-  sellerId: string;
-}
-
 function AddToCartButton(
-  { skuId, sellerId, discount, price, productGroupId, name }: Props,
+  { productId, price, discount, name }: UseAddToCartProps,
 ) {
   const props = useAddToCart({
-    skuId,
-    sellerId,
-    discount,
+    productId,
     price,
-    productGroupId,
-    name,
+    discount,
+    name
   });
 
   return (
