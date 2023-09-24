@@ -1,8 +1,0 @@
-{
-  "namespace": "deco-sites/xpto",
-  "siteId": 1523,
-  "imports": [
-    "$live/live.gen.ts",
-    "deco-sites/std/live.gen.ts"
-  ]
-}

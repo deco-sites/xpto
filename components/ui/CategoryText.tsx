@@ -1,7 +1,7 @@
-import type { SectionProps } from "$live/types.ts";
+import type { SectionProps } from "deco/types.ts";
 
-import type { LoaderReturnType } from "$live/types.ts";
-import type { ProductListingPage } from "deco-sites/std/commerce/types.ts";
+import type { LoaderReturnType } from "deco/types.ts";
+import type { ProductListingPage } from "apps/commerce/types.ts";
 
 export type TextAlign = "Left" | "Center" | "Right" | "Justify";
 

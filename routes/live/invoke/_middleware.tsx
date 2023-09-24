@@ -1,6 +1,5 @@
 import { MiddlewareHandlerContext } from "$fresh/server.ts";
-import { Resolvable } from "$live/engine/core/resolver.ts";
-import { LiveConfig, LiveState } from "$live/types.ts";
+import { Resolvable } from "deco/engine/core/resolver.ts";
 import { getCookies } from "std/http/mod.ts";
 import { encode } from "https://deno.land/std@0.195.0/encoding/base64.ts";
 import { fetchAPI } from "deco-sites/std/utils/fetch.ts";
@@ -152,7 +151,7 @@ const convertSecondsToDate = (seconds: number): Date => {
 
 export const handler = async (
   req: Request,
-  ctx: MiddlewareHandlerContext<LiveConfig<MiddlewareConfig, LiveState>>,
+  ctx: MiddlewareHandlerContext,
 ) => {
   const res = await ctx.next();
   const config: Account = {

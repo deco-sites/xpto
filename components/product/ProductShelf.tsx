@@ -1,14 +1,14 @@
+import type { LoaderReturnType } from "deco/types.ts";
 import ProductCard from "$store/components/product/ProductCard.tsx";
-import SliderJS from "$store/islands/SliderJS.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
-import Slider from "$store/components/ui/Slider.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
+import Slider from "$store/components/ui/Slider.tsx";
+import SliderJS from "$store/islands/SliderJS.tsx";
 import { SendEventOnLoad } from "$store/sdk/analytics.tsx";
-import { useId } from "preact/hooks";
-import { mapProductToAnalyticsItem } from "deco-sites/std/commerce/utils/productToAnalyticsItem.ts";
 import { useOffer } from "$store/sdk/useOffer.ts";
-import type { LoaderReturnType } from "$live/types.ts";
-import type { Product } from "deco-sites/std/commerce/types.ts";
+import type { Product } from "apps/commerce/types.ts";
+import { mapProductToAnalyticsItem } from "deco-sites/std/commerce/utils/productToAnalyticsItem.ts";
+import { useId } from "preact/hooks";
 
 export interface Props {
   products: LoaderReturnType<Product[] | null>;

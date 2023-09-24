@@ -1,24 +1,24 @@
-import { useId } from "preact/hooks";
-import AddToCartButton from "$store/islands/AddToCartButton.tsx";
-import ShippingSimulation from "$store/islands/ShippingSimulation.tsx";
+import ImageZoomJS from "$store/components/product/ImageZoomJS.tsx";
 import Breadcrumb from "$store/components/ui/Breadcrumb.tsx";
 import Button from "$store/components/ui/Button.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
-import Image from "deco-sites/std/components/Image.tsx";
 import Slider from "$store/components/ui/Slider.tsx";
 import SliderJS from "$store/components/ui/SliderJS.tsx";
+import AddToCartButton from "$store/islands/AddToCartButton.tsx";
 import OutOfStock from "$store/islands/OutOfStock.tsx";
-import { useOffer } from "$store/sdk/useOffer.ts";
-import { formatPrice } from "$store/sdk/format.ts";
+import ShippingSimulation from "$store/islands/ShippingSimulation.tsx";
 import { SendEventOnLoad } from "$store/sdk/analytics.tsx";
+import { formatPrice } from "$store/sdk/format.ts";
+import { useOffer } from "$store/sdk/useOffer.ts";
+import type { ProductDetailsPage } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "deco-sites/std/commerce/utils/productToAnalyticsItem.ts";
-import type { ProductDetailsPage } from "deco-sites/std/commerce/types.ts";
-import type { LoaderReturnType } from "$live/types.ts";
-import ImageZoomJS from "$store/components/product/ImageZoomJS.tsx";
+import Image from "deco-sites/std/components/Image.tsx";
+import { useId } from "preact/hooks";
+import type { LoaderReturnType } from "deco/types.ts";
 
-import ProductSelector from "./ProductVariantSelector.tsx";
 import ProductImageZoom from "$store/islands/ProductImageZoom.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
+import ProductSelector from "./ProductVariantSelector.tsx";
 
 export type Variant = "front-back" | "slider" | "auto";
 

@@ -75,7 +75,7 @@ function CartItem({ index, locale, currency }: Props) {
               const quantityDiff = quantity - item.quantity;
 
               if (!cart.value) return;
-              
+
               sendEvent({
                 name: quantityDiff < 0 ? "remove_from_cart" : "add_to_cart",
                 params: {

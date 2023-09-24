@@ -60,7 +60,11 @@ function CartSalesforce() {
       >
         {cart.value.productItems?.map((_, index) => (
           <li key={index}>
-            <CartItemSalesforce index={index} currency={currencyCode!} locale={locale!} />
+            <CartItemSalesforce
+              index={index}
+              currency={currencyCode!}
+              locale={locale!}
+            />
           </li>
         ))}
       </ul>

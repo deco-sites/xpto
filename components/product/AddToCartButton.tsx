@@ -11,7 +11,7 @@ function AddToCartButton(
     productId,
     price,
     discount,
-    name
+    name,
   });
 
   return (

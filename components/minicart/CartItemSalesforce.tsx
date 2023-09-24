@@ -26,7 +26,7 @@ function CartItemSalesforce({ index, locale, currency }: Props) {
     price,
     quantity,
     image,
-    itemId
+    itemId,
   } = item;
 
   const isGift = price < 0.01;
@@ -68,7 +68,7 @@ function CartItemSalesforce({ index, locale, currency }: Props) {
             quantity={quantity}
             onChange={withLoading((quantity) => {
               const quantityDiff = quantity - item.quantity;
-              
+
               if (!cart.value) return;
 
               sendEvent({
