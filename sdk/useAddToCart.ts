@@ -1,6 +1,6 @@
 import { useSignal } from "@preact/signals";
 import { useCallback } from "preact/hooks";
-import { useCart } from "salesforce-integration/hooks/useCart.ts";
+import { useCart } from "apps/salesforce/hooks/useCart.ts";
 import { useUI } from "deco-sites/fashion/sdk/useUI.ts";
 import { sendEvent } from "deco-sites/fashion/sdk/analytics.tsx";
 

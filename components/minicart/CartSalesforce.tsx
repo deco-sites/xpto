@@ -1,4 +1,4 @@
-import { useCart } from "salesforce-integration/hooks/useCart.ts";
+import { useCart } from "apps/salesforce/hooks/useCart.ts";
 import { formatPrice } from "$store/sdk/format.ts";
 import Button from "$store/components/ui/Button.tsx";
 import { sendEvent } from "$store/sdk/analytics.tsx";

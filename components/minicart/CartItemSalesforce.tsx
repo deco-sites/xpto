@@ -2,7 +2,7 @@ import Icon from "$store/components/ui/Icon.tsx";
 import Image from "deco-sites/std/components/Image.tsx";
 import Button from "$store/components/ui/Button.tsx";
 import QuantitySelector from "$store/components/ui/QuantitySelector.tsx";
-import { useCart } from "salesforce-integration/hooks/useCart.ts";
+import { useCart } from "apps/salesforce/hooks/useCart.ts";
 import { formatPrice } from "$store/sdk/format.ts";
 import { sendEvent } from "$store/sdk/analytics.tsx";
 import { useSignal } from "@preact/signals";
